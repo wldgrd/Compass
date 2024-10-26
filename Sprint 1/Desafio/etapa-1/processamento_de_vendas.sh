@@ -1,62 +1,54 @@
 #!/bin/bash
 
-#set -e
+# O script possui alguns checkpoints para facilitar o debug. Cada checkpoint tem nome chk1, chk2, etc 
+cd /home/welder/Documents
+echo "chk1: iniciando o script em $(date +"%Y-%m-%d às %H:%M:%S")"
 
-export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin
-export DIRARQ=/tmp/weeelder/ecommerce
-echo "inicindo o script"
+mkdir -p vendas #Cria o diretório vendas (na primeira execução)
+echo "chk2: aqui criou o diretório vendas" 
 
-#Criando o diretório vendas (na primeira execução)
-mkdir -p $DIRARQ/vendas
-echo "aqui criou o diretorio" 
+cp dados_de_vendas.csv vendas/ #copia o arquivo dados_de_vendas.csv para o diretório vendas
+echo "chk3: copiado o arquivo csv para vendas"
 
-#copiando o arquivo dados_de_vendas.csv para o diretório vendas
-cp $DIRARQ/dados_de_vendas.csv $DIRARQ/vendas/
+data_do_sistema=$(date +%Y%m%d) #extrai a data do sistema e salva o valor na variável data_do_sistema no formato YYYYMMDD
+#o símbolo $ serve para referenciar variáveis ou substituição de comando e, neste caso, está servindo como substituição
 
-#extraindo a data do sistema e salvando o valor na variável data_do_sistema no 
-#formato YYYYMMDD
-#o símbolo $ serve para referenciar variáveis ou substituição de comando
-#neste caso está servindo como substituição
+#--------------------Manipulação dos arquivos e diretórios------------------------#
 
-data_do_sistema=$(date +%Y%m%d)
+mkdir -p vendas/backup/ #cria o diretório backup dentro do diretório vendas (na primeira execução)
+echo "chk4: criado o diretório backup"
 
-#criando o diretório backup dentro do diretório vendas (na primeira execução)
-mkdir -p $DIRARQ/vendas/backup/
+cp vendas/dados_de_vendas.csv vendas/backup/ #copia o arquivo dados_de_vendas.csv do diretório vendas para o diretório backup
+echo "chk5: arquivo csv copiado para backup"
 
-#copiando o arquivo dados_de_vendas.csv do diretório vendas para o diretório backup
-cp $DIRARQ/vendas/dados_de_vendas.csv $DIRARQ/vendas/backup/
+mv vendas/backup/dados_de_vendas.csv vendas/backup/dados-$data_do_sistema.csv #renomeia o arquivo dados_de_vendas.csv da pasta backup p/  dados-YYYYMMDD.csv
+echo "chk6: arquivo csv renomeado"
 
-#renomeando o arquivo dados_de_vendas.csv da pasta backup no formato solicitado
-#dados-YYYYMMDD.csv
-mv $DIRARQ/vendas/backup/dados_de_vendas.csv $DIRARQ/vendas/backup/dados-$data_do_sistema.csv
+mv vendas/backup/dados-$data_do_sistema.csv vendas/backup/backup-dados-$data_do_sistema.csv #renomeia o arquivo do diretório backup para backup-dados-YYYYMMDD
+echo "chk7: arquivo csv renomeado para backup"
 
-#renomeando o arquivo do diretório backup para backup-dados-YYYYMMDD
-mv $DIRARQ/vendas/backup/dados-$data_do_sistema.csv $DIRARQ/vendas/backup/backup-dados-$data_do_sistema.csv
-
-#criando o relatório
-echo $(date +%Y/%m/%d\ %H:%M) > $DIRARQ/vendas/backup/relatorio-$data_do_sistema.txt
-
-#echo "aqui gerou o relatorio"
+echo $(date +%Y/%m/%d\ %H:%M) > vendas/backup/relatorio-$data_do_sistema.txt #cria o arquivo relatório e acrescenta a data e a hora do sistema
+echo "chk8: relatório criado"
 
 #Separando as informações do csv e pegando o campo data
-awk -F, 'NR==2 {print "O primeiro registro foi feito em: " $5} END {print "O último registro foi feito em: " $5}' $DIRARQ/vendas/dados_de_vendas.csv >> $DIRARQ/vendas/backup/relatorio-$data_do_sistema.txt
+awk -F, 'NR==2 {print "O primeiro registro foi feito em: " $5} END {print "O último registro foi feito em: " $5}' vendas/dados_de_vendas.csv >> vendas/backup/relatorio-$data_do_sistema.txt
+echo "chk9: acrescentadas as datas do primeiro e último registros no relatório"
 
 #Contando a quantidade total de itens diferentes vendidos
-awk -F, 'NR>1 {itens[$2]=1} END {print "Quantidade de itens diferentes vendidos: " length(itens)}' $DIRARQ/vendas/dados_de_vendas.csv >> $DIRARQ/vendas/backup/relatorio-$data_do_sistema.txt
+awk -F, 'NR>1 {itens[$2]} END {print "Quantidade de itens diferentes vendidos: " length(itens)}' vendas/dados_de_vendas.csv >> vendas/backup/relatorio-$data_do_sistema.txt
+echo "chk10: contagem dos itens distintos realizada"
 
-
-
-#Exibindo as dez primeiras linhas do arquivo de backup e adicionando no relatório.txt
-#echo "Pré-visualização do arquivo backup:" >> $DIRARQ/vendas/backup/relatorio-$data_do_sistema.txt
-head -n 11 $DIRARQ/vendas/backup/backup-dados-$data_do_sistema.csv >> $DIRARQ/vendas/backup/relatorio-$data_do_sistema.txt
+#Exibindo dez itens e o cabeçalho do arquivo de backup e adicionando no relatório.txt
+head -n 11 vendas/backup/backup-dados-$data_do_sistema.csv >> vendas/backup/relatorio-$data_do_sistema.txt
+echo "chk11: lista de itens adicionada ao relatorio"
 
 #Comprimindo o arquivo de backup para formato .zip
-zip $DIRARQ/vendas/backup/backup-dados-$data_do_sistema.zip $DIRARQ/vendas/backup/backup-dados-$data_do_sistema.csv
-
-echo aqui zipou
+zip vendas/backup/backup-dados-$data_do_sistema.zip vendas/backup/backup-dados-$data_do_sistema.csv
+echo "chk12: arquivo de backup compactado em formato .zip"
 
 #Removendo os arquivos backup-dados-YYYYMMDD.csv e dados_de_vendas.csv
-rm $DIRARQ/vendas/backup/backup-dados-$data_do_sistema.csv
-rm $DIRARQ/vendas/dados_de_vendas.csv
+rm vendas/backup/backup-dados-$data_do_sistema.csv
+rm vendas/dados_de_vendas.csv
+echo "chk13: removidos os arquivos utilizados nas manipulações"
 
-echo "fim do script"
+echo "chk14: finalizando o script em $(date +"%Y-%m-%d às %H:%M:%S")"
