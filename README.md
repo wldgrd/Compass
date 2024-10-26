@@ -54,7 +54,10 @@ Posteriormente, durante o período de graduação, trabalhei como professor de f
 Em janeiro de 2024, ingressei na trilha de Analista de Dados da Comunidade DS, desenvolvi alguns projetos, participei de um Hack Day e obtive alguns certificados (SQL, Python para Análise de Dados, Estatística para Análise de Dados, Power BI, Métricas de Negócio, Análise de Dados em Produção e Banco de Dados Relacional).<br><br>
 Em outubro de 2024 ingressei como estagiário na Compass UOL (Trilha A - AWS Cloud Data Engineering) - Data & Analytics onde estou desenvolvendo novas competências e habilidades.</p>
 
----
+## **Soft Skills**
+
+<p>Sou comunicativo, atencioso, esforçado, organizado, tenho facilidade de trabalhar em grupo e também sou muito solícito com aquilo que eu souber e puder ajudar.  </p>
+
 
 ## **Conhecimentos Técnicos e Ferramentas**
 ### **Linguagens:** 
