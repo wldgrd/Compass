@@ -4,10 +4,10 @@
 
 <div align="center">
   <a href="www.linkedin.com/in/weldergarrido" target="_blank">
-    <img src="https://img.shields.io/static/v1?message=LinkedIn&logo=linkedin&label=&color=0077B5&logoColor=white&labelColor=&style=for-the-badge" height="25" alt="linkedin logo"  />
+    <img src=img/logos/linkedin_logo.svg height="25" alt="linkedin logo"  />
   </a>
   <a href="wldgrd" target="_blank">
-    <img src="https://img.shields.io/static/v1?message=Discord&logo=discord&label=&color=7289DA&logoColor=white&labelColor=&style=for-the-badge" height="25" alt="discord logo"  />
+    <img src=img/logos/discord_logo.svg height="25" alt="discord logo"  />
   </a>
 </div>
 
@@ -16,17 +16,17 @@
 <br>
 
 <div align="center">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" height="40" alt="Python logo" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" height="40" alt="SQLite logo" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" height="40" alt="PostgreSQL logo" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" height="40" alt="Linux logo" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" height="40" alt="Git logo" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" height="40" alt="VSCode logo" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" height="40" alt="Jupyter logo" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kaggle/kaggle-original.svg" height="40" alt="Kaggle logo" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" height="40" alt="NumPy logo" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" height="40" alt="Pandas logo" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" height="40" alt="Bash logo" />
+  <img src=img/logos/python_logo.svg height="40" alt="Python logo" />
+  <img src=img/logos/sqlite_logo.svg height="40" alt="SQLite logo" />
+  <img src=img/logos/postgresql_logo.svg height="40" alt="PostgreSQL logo" />
+  <img src=img/logos/linux_logo.svg height="40" alt="Linux logo" />
+  <img src=img/logos/git_logo.svg height="40" alt="Git logo" />
+  <img src=img/logos/vscode_logo.svg height="40" alt="VSCode logo" />
+  <img src=img/logos/jupyter_logo.svg height="40" alt="Jupyter logo" />
+  <img src=img/logos/kaggle_logo.svg height="40" alt="Kaggle logo" />
+  <img src=img/logos/numpy_logo.svg height="40" alt="NumPy logo" />
+  <img src=img/logos/pandas_logo.svg height="40" alt="Pandas logo" />
+  <img src=img/logos/bash_logo.svg height="40" alt="Bash logo" />
 </div>
 
 
