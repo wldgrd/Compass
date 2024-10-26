@@ -62,7 +62,7 @@ Em outubro de 2024 ingressei como estagiário na Compass UOL (Trilha A - AWS Clo
 -SQL<br>
 -Bash
 
-### **SGBDs:** 
+### **BDs:** 
 -SQLite<br>
 -PostgreSQL<br>
 
