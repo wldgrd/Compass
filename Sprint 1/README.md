@@ -1,15 +1,20 @@
 # Resumo
 
-**Git Hub:** Aprendi isso, isso e mais aquilo.
+**Git Hub:** Nesse curso aprendi a criar um repositório no github, sincronizar repositório local, adicionar e remover arquivos, clonar repositórios, criação de branches e operações com branches, stashes, tags, enviar e receber atualizações através do terminal via VS Code.
+Uma parte importante do curso se concentra nas boas práticas em relação aos commits e em relação ao fluxo de trabalho no github.
+Para a sincronização do repositório local com o repositório remoto, tenho usado o fluxo a seguir:
+- git status
+- git add diretorio/arquivo ou git add .
+- git commit -a -m "texto de explicação"
+- git push  
+**OBS:** Como não estou adicionando arquivos pelo repositório remoto, não tenho utilizado o comando git pull para baixar as atualizações para o repositório local.
+---  
 
 **Linux:** Pude entender como funciona isso e aquilo.
 
 # Evidências
 
-
-Ao executar o código do exercício ... observei que ... conforme podemos ver na imagem a seguir:
-
-![Evidencia 1](evidencias/sample.webp)
+[🕵️‍♂️**Evidencia 1:** ](evidencias/sample.webp)
 
 
 # Certificados
