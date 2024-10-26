@@ -50,7 +50,7 @@
 
 <p>Sou graduado em física pela Universidade Estadual de Campinas - UNICAMP, eletricista de manutenção pelo SENAI e técnico em eletroeletrônica pelo Colégio Técnico de Campinas - COTUCA UNICAMP.<br><br>
 Durante meu período de formação nos cursos técnicos, na área de desenvolvimento de circuitos eletrônicos e manutenção de placas eletrônicas (~3 anos).<br><br>
-Posteriormente, durante o período de graduação, trabalhei como professor de física ministrando plantões de dúvida, aulas de aprofundamento, aulas preparatórias para olimpíadas e também aulas para cursinho pré-vestibular e ensino médio regular. Permaneci na carreira por 14 anos e em 2023 ingressei na UNIVESP para meus estudos em ciência de dados.<br><br><br><br>
+Posteriormente, durante o período de graduação, trabalhei como professor de física ministrando plantões de dúvida, aulas de aprofundamento, aulas preparatórias para olimpíadas e também aulas para cursinho pré-vestibular e ensino médio regular. Permaneci na carreira por 14 anos e em 2023 ingressei na UNIVESP para meus estudos em ciência de dados.<br><br>
 Em janeiro de 2024, ingressei na trilha de Analista de Dados da Comunidade DS, desenvolvi alguns projetos, participei de um Hack Day e obtive alguns certificados (SQL, Python para Análise de Dados, Estatística para Análise de Dados, Power BI, Métricas de Negócio, Análise de Dados em Produção e Banco de Dados Relacional).<br><br>
 Em outubro de 2024 ingressei como estagiário na Compass UOL (Trilha A - AWS Cloud Data Engineering) - Data & Analytics onde estou desenvolvendo novas competências e habilidades.</p>
 
