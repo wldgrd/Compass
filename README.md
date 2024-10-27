@@ -56,7 +56,11 @@ Em outubro de 2024 ingressei como estagiário na Compass UOL (Trilha A - AWS Clo
 
 ## **Soft Skills**
 
-<p>Sou comunicativo, atencioso, esforçado, organizado, tenho facilidade de trabalhar em grupo e também sou muito solícito com aquilo que eu souber e puder ajudar.  </p>
+Sou comunicativo, atencioso, esforçado, organizado, tenho facilidade de trabalhar em grupo e também sou muito solícito com aquilo que eu souber e puder ajudar.  
+
+## **Hobbies**  
+
+Gosto muito de ler, ouvir música, ver filmes, seriados, estar com o meu companheiro, jogar jogos de tabuleiro, computador ou vídeo game, comer em restaurantes diferentes e experimentar diversos tipos de culinária, viajar e estar com os amigos.
 
 
 ## **Conhecimentos Técnicos e Ferramentas**
