@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # O script possui alguns checkpoints para facilitar o debug. Cada checkpoint tem nome chk1, chk2, etc 
-cd /home/welder/Documents # para garantir que o cron encontre o diretório correto
+cd /home/welder/Documents/ecommerce # para garantir que o cron encontre o diretório correto
 
 echo "chk1: iniciando o script em $(date +"%Y-%m-%d às %H:%M:%S")"
 
