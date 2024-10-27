@@ -1,0 +1,15 @@
+2024/10/23 15:27
+O primeiro registro foi feito em: 21/01/2023
+O último registro foi feito em: 31/01/2023
+Quantidade de itens diferentes vendidos: 46
+id,produto,quantidade,preço,data
+21,fone de ouvido,5,80.00,21/01/2023
+22,mouse sem fio,7,50.00,22/01/2023
+23,filtro de linha,6,30.00,23/01/2023
+24,cabo HDMI,10,15.00,24/01/2023
+25,pilha AA,20,2.00,25/01/2023
+26,luminária de mesa,4,40.00,26/01/2023
+27,relogio de parede,8,20.00,27/01/2023
+28,porta-retrato digital,2,100.00,28/01/2023
+29,vaporizador de roupas,1,150.00,29/01/2023
+30,balança digital,3,60.00,30/01/2023

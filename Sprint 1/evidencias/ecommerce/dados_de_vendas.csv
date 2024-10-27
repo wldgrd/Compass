@@ -1,0 +1,79 @@
+id,produto,quantidade,preço,data
+33,faca elétrica,4,80.00,02/02/2023
+34,sanduicheira elétrica,6,40.00,03/02/2023
+35,mixer de alimentos,7,50.00,04/02/2023
+36,batedeira planetária,2,300.00,05/02/2023
+52,guitarra elétrica fender,3,2999.00,20/02/2023
+53,amplificador de guitarra,4,799.00,21/02/2023
+54,pedaleira preta,5,499.00,22/02/2023
+55,cabo para instrumento ninja,10,59.00,23/02/2023
+56,palheta dunlop,20,1.00,24/02/2023
+57,afinador digital,6,49.00,25/02/2023
+58,capotraste,8,99.00,26/02/2023
+59,suporte para guitarra,7,29.00,27/02/2023
+60,correia para guitarra,9,19.00,28/02/2023
+61,encordoamento para guitarra,12,39.00,01/03/2023
+62,violão acústico,4,299.00,02/03/2023
+63,capa para violão,5,99.00,03/03/2023
+64,banqueta para violão,6,69.00,04/03/2023
+65,limpador de cordas,8,29.00,05/03/2023
+66,flauta transversal,2,1999.00,06/03/2023
+67,suporte para flauta,4,79.00,07/03/2023
+68,estojo para flauta,10,9999.00,08/03/2023
+70,saxofone,4,4359.00,10/03/2023
+71,suporte para saxofone,5,32.69,11/03/2023
+76,teclado musical casio,2,784.98,16/03/2023
+77,guitarra elétrica,3,1500.00,17/03/2023
+78,amplificador,4,1200.00,18/03/2023
+79,pedal de distorção,5,250.50,19/03/2023
+80,cabo de guitarra,10,30.00,20/03/2023
+81,violão folk,6,850.00,21/03/2023
+82,suporte para violão,7,45.00,22/03/2023
+83,estojo para violão,8,180.00,23/03/2023
+84,metronome digital,12,65.00,24/03/2023
+85,partitura de piano,15,25.00,25/03/2023
+86,livro de teoria musical,3,45.90,26/03/2023
+87,afinador de guitarra,20,35.00,27/03/2023
+88,teclado MIDI,4,400.00,28/03/2023
+89,sintetizador,2,3000.00,29/03/2023
+90,caixa de ritmos,5,1500.00,30/03/2023
+91,violoncelo,1,4000.00,31/03/2023
+92,palheta de guitarra,50,5.00,01/04/2023
+93,caixa de som Bluetooth,6,599.00,02/04/2023
+94,headphones,10,150.00,03/04/2023
+95,piano digital,3,2500.00,04/04/2023
+96,coral,2,1200.00,05/04/2023
+97,teclado arranjador,1,1800.00,06/04/2023
+98,banquinho para músico,8,45.00,07/04/2023
+99,suporte para teclado,4,90.00,08/04/2023
+100,cabo de áudio,12,15.00,09/04/2023
+101,kit de manutenção,6,25.00,10/04/2023
+102,tripé para microfone,3,150.00,11/04/2023
+103,microfone condensador,2,800.00,12/04/2023
+104,mesa de som,1,2000.00,13/04/2023
+105,monitor de estúdio,2,1000.00,14/04/2023
+106,suporte para monitor,5,150.00,15/04/2023
+107,interface de áudio,3,500.00,16/04/2023
+108,mesa de mixagem,1,3000.00,17/04/2023
+109,kit de gravação,2,900.00,18/04/2023
+110,protetor de ouvido,10,30.00,19/04/2023
+111,captação para violão,4,200.00,20/04/2023
+112,pedal de loop,3,300.00,21/04/2023
+113,kit de bateria eletrônica,2,2500.00,22/04/2023
+114,manual de guitarra,5,40.00,23/04/2023
+115,suporte para bateria,3,75.00,24/04/2023
+116,bateria para guitarra,10,100.00,25/04/2023
+117,violão elétrico,2,2000.00,26/04/2023
+118,encordoamento para guitarra,20,25.00,27/04/2023
+119,kit de acessórios para guitarra,8,60.00,28/04/2023
+120,panela de som,4,500.00,29/04/2023
+121,escudo para violão,3,90.00,30/04/2023
+122,flanger,1,220.00,01/05/2023
+123,suporte para caixa de som,2,120.00,02/05/2023
+124,cordas para baixo,10,30.00,03/05/2023
+125,bateria para baixo,4,120.00,04/05/2023
+126,monitor para guitarra,3,350.00,05/05/2023
+127,afinação automática,2,180.00,06/05/2023
+128,teclado portátil,1,800.00,07/05/2023
+129,kit de microfones,5,400.00,08/05/2023
+130,suporte para microfone,10,60.00,09/05/2023

@@ -1,0 +1,15 @@
+2024/10/25 15:27
+O primeiro registro foi feito em: 02/02/2023
+O último registro foi feito em: 09/05/2023
+Quantidade de itens diferentes vendidos: 77
+id,produto,quantidade,preço,data
+33,faca elétrica,4,80.00,02/02/2023
+34,sanduicheira elétrica,6,40.00,03/02/2023
+35,mixer de alimentos,7,50.00,04/02/2023
+36,batedeira planetária,2,300.00,05/02/2023
+52,guitarra elétrica fender,3,2999.00,20/02/2023
+53,amplificador de guitarra,4,799.00,21/02/2023
+54,pedaleira preta,5,499.00,22/02/2023
+55,cabo para instrumento ninja,10,59.00,23/02/2023
+56,palheta dunlop,20,1.00,24/02/2023
+57,afinador digital,6,49.00,25/02/2023

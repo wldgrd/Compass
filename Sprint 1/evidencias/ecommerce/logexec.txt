@@ -1,0 +1,15 @@
+chk1: iniciando o script em 2024-10-25 às 15:27:01
+chk2: aqui criou o diretório vendas
+chk3: copiado o arquivo csv para vendas
+chk4: criado o diretório backup
+chk5: arquivo csv copiado para backup
+chk6: arquivo csv renomeado
+chk7: arquivo csv renomeado para backup
+chk8: relatório criado
+chk9: acrescentadas as datas do primeiro e último registros no relatório
+chk10: contagem dos itens distintos realizada
+chk11: lista de itens adicionada ao relatorio
+  adding: vendas/backup/backup-dados-20241025.csv (deflated 62%)
+chk12: arquivo de backup compactado em formato .zip
+chk13: removidos os arquivos utilizados nas manipulações
+chk14: finalizando o script em 2024-10-25 às 15:27:01
