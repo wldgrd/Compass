@@ -1,14 +1,3 @@
-# Instruções
-
-Neste arquivo você apresentará suas entregas referentes ao desafio. Utilize o diretório "Desafio" para organizar seus artefatos e este README.md para fazer referência aos arquivos de código-fonte e demais entregáveis solicitados.
-
-Esperamos que haja, minimamente:
-
-- Passo a passo para obter o resultado entregue do desafio.
-- Trechos de códigos e suas explicações.
-- Relacionamento com a pasta de evidências (imagens).
-
-
 # Etapas
 
 
@@ -44,14 +33,53 @@ O código usado para começar a primeira etapa e criar o diretório ecommerce:
     
     
 
-2. ... [Etapa II](etapa-2)
+**Etapa II**  
+O objetivo da segunda etapa do desafio é configurar o agendamento automático para que a execução do script processamento_de_vendas.sh seja feita por 4 dias seguidos. <br><br>
 
-    Já com esse código, o objetivo é ...
+**Os procedimentos que o script deve fazer são os seguintes:**  
+- Criar um agendamento de execução de comandos Linux para que o script _processamento_de_vendas.sh rode durante 4 dias seguidos às 15h27min  
+```
+crontab -e
+```  
+O comando crontab -e abre o editor de texto para que se possa adicionar a linha de comando referente ao agendamento.  
+Para atender a solicitação de rodar por 4 dias, foi utilizada a seguinte linha de código:    
 
-    ```
-    Esta é uma outra linha de código
-    ```
-    
+```  
+27 15 * * 2-5 /home/welder/Documents/ecommerce/processamento_de_vendas.sh > /home/welder/Documents/ecommerce/logexec.txt 2>&1
+```  
+
+- Descrição da sintaxe da linha de código adicionada no serviço de agendamento:  
+
+    - O comando acima significa que 27 minutos após a hora 15 (15h27min) o serviço cron executará o script  
+    - "* *" : o primeiro * significa que será executado em qualquer dia do mês e o segundo * significa que será executado em qualquer mês    
+    - 2-5: será executado de terça até quinta-feira
+    - /home/welder/Documents/ecommerce/processamento_de_vendas.sh : caminho para o script que será executado  
+    - **>** : redireciona a saída padrão   
+    - /home/welder/Documents/ecommerce/logexec.txt 2>&1 : tanto a saída de execução normal quanto os erros serão enviados ao arquivo logexec.txt (essa etapa não foi solicitada no desafio, porém ajuda a verificar se o script foi executado de modo correto.)
+
+
+**Etapa Final**  
+O objetivo da etapa final é criar o script consolidador_de_processamento_de_vendas.sh que vai gerar o relatório final de vendas.  
+
+**Os procedimentos que o script deve fazer são os seguintes:**  
+
+
+- Modificar manualmente, todos os dias, os dados do arquivo dados_de_vendas.csv inserindo ou retirando linhas.  
+
+- Criar um segundo Script chamado consolidador_de_processamento_de_vendas.sh que una todos os relatórios gerados anteriormente em um único arquivo chamado relatório_final.txt  
+Para a criação do script consolidador_de_processamento_de_vendas.sh foi usado o código:  
+
+```
+echo "Relatório Final" > relatorio_final.txt   
+
+cat vendas/backup/relatorio-*.txt > relatorio_final.txt
+```  
+- Descrição das linhas do código:
+
+    - echo "Relatório Final" > relatorio_final.txt : Cria o arquivo relatorio_final.txt e escreve Relatório Final dentro dele
+    - cat vendas/backup/relatorio-*.txt > relatorio_final.txt : Pega todos os arquivos cujo nome começa com relatorio- e que possuem a extensão .txt e adiciona seu conteúdo ao arquivo relatorio final.  
+
+
 
 
 
