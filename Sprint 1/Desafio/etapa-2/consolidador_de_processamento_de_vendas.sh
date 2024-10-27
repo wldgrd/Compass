@@ -1,9 +1,4 @@
 #!/bin/bash
-echo "Relatório Final" > relatorio_final.txt
+echo "Relatório Final" > relatorio_final.txt # Cria o arquivo relatorio_final.txt e escreve Relatório Final dentro dele
 
-#for relatorio in vendas/backup/relatorio-$data_do_sistema.txt; do
-#	cat  "$relatorio" >> relatorio_final.txt
-#	echo -e "\n" >> relatorio_final.txt
-#done
-
-cat vendas/backup/relatorio-*.txt > relatorio_final.txt 
+cat vendas/backup/relatorio-*.txt > relatorio_final.txt # Pega todos os arquivos cujo nome começa com relatorio- e que possuem a extensão .txt e os adiciona ao arquivo relatorio final.
