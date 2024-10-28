@@ -14,7 +14,7 @@ Para a sincronização do repositório local com o repositório remoto, tenho us
 
 # Evidências
 
-[🕵️‍♂️**Clique aqui para ver todas as evidências registradas** ](evidencias)
+[🕵️‍♂️**Clique aqui para ver todas as evidências registradas** ](/Sprint%201/evidencias/README.md)
 
 
 # Certificados
