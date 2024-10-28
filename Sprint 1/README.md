@@ -21,6 +21,3 @@ Para a sincronização do repositório local com o repositório remoto, tenho us
 
 [🧑‍🎓**Curso:** Linux para Desenvolvedores (c/ terminal, Shell, Apache e +)](/Sprint%201/certificados/certificado_linux.pdf)  
 [🧑‍🎓**Curso:** Git e GitHub do básico ao avançado (c/ gist e GitHub Pages)](/Sprint%201/certificados/certificado_git.pdf)
-
-
-
