@@ -85,3 +85,4 @@ Gosto muito de ler, ouvir música, ver filmes, seriados, estar com o meu companh
 ## Sprints 
 
 1. [Sprint 1](Sprint%201/README.md)
+2. [Sprint 2](/Sprint2/README.md)
