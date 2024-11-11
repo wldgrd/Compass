@@ -1,22 +1,7 @@
-SELECT *
-FROM Carro c 
-ORDER BY idCarro 
-
-SELECT *
-FROM Cliente
-ORDER BY idCliente 
-
-SELECT *
-FROM Combustivel 
-ORDER BY idcombustivel 
-
-SELECT *
-FROM Vendedor v 
-ORDER BY idVendedor 
 
 /*-------------------------------------------------------------------------------------*/
 
-INSERT OR IGNORE INTO Carro (idCarro, kmCarro, classiCarro, marcaCarro, modeloCarro, anoCarro, idcombustivel )
+INSERT OR IGNORE INTO Carro (idCarro, kmCarro, classiCarro, marcaCarro, modeloCarro, anoCarro, idcombustivel ) -- Comando 'OR IGNORE' utilizado para que sejam inseridas apenas as chaves que não existem na tabela
 SELECT 
 	DISTINCT idCarro, 
 	kmCarro, 
@@ -26,6 +11,10 @@ SELECT
 	anoCarro, 
 	idcombustivel 
 FROM tb_locacao 
+
+SELECT * -- verificando se foram feitas as inserções na tabela Carro
+FROM Carro c 
+ORDER BY idCarro 
 
 /*-------------------------------------------------------------------------------------*/
 
@@ -38,6 +27,10 @@ SELECT
 	paisCliente
 FROM tb_locacao 
 
+SELECT * -- verificando se foram feitas as inserções na tabela Cliente
+FROM Cliente
+ORDER BY idCliente 
+
 /*-------------------------------------------------------------------------------------*/
 
 INSERT INTO Combustivel (idcombustivel, tipoCombustivel)
@@ -45,6 +38,10 @@ SELECT
 	DISTINCT idcombustivel, 
 	tipoCombustivel
 FROM tb_locacao 
+
+SELECT * -- verificando se foram feitas as inserções na tabela Combustível
+FROM Combustivel 
+ORDER BY idcombustivel
 
 /*-------------------------------------------------------------------------------------*/
 
@@ -63,6 +60,10 @@ SELECT
 	idcombustivel
 FROM tb_locacao 
 
+SELECT * -- verificando se foram feitas as inserções na tabela Locacao
+FROM Locacao
+ORDER BY idLocacao
+
 /*-------------------------------------------------------------------------------------*/
 
 INSERT INTO Vendedor (idVendedor, nomeVendedor, sexoVendedor, estadoVendedor)
@@ -73,4 +74,6 @@ SELECT
 	estadoVendedor
 FROM tb_locacao 
 
-
+SELECT * -- verificando se foram feitas as inserções na tabela Vendedor
+FROM Vendedor v 
+ORDER BY idVendedor 
