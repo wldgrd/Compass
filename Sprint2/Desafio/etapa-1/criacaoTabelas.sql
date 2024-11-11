@@ -10,20 +10,20 @@ CREATE TABLE Vendedor ( -- cria a tabela Vendedor
 /*-------------------------------------------------------------------------------------*/
 DROP TABLE Carro;
 CREATE TABLE Carro ( -- cria a tabela Carro
-    idCarro         INT PRIMARY KEY NOT NULL,
+    idCarro         INT PRIMARY KEY NOT NULL, -- chave primária, identificador único
     kmCarro         INT 			NOT NULL,
     classiCarro     VARCHAR(50) 	NOT NULL,
     marcaCarro      VARCHAR(80) 	NOT NULL,
     modeloCarro     VARCHAR(80) 	NOT NULL,
     anoCarro        INT 			NOT NULL,
     idcombustivel   INT 			NOT NULL,
-    FOREIGN KEY (idcombustivel) REFERENCES Combustivel(idcombustivel)
+    FOREIGN KEY (idcombustivel) REFERENCES Combustivel(idcombustivel) -- chave estrangeira para fazer a ligação entre as tabelas Carro e Combustível
 )
 
 /*-------------------------------------------------------------------------------------*/
 DROP TABLE Locacao;
-CREATE TABLE Locacao (
-    idLocacao       INT PRIMARY KEY NOT NULL,
+CREATE TABLE Locacao ( -- criação da tabela Locacao
+    idLocacao       INT PRIMARY KEY NOT NULL, -- chave primária, identificador único
     dataLocacao     DATE 			NOT NULL,
     horaLocacao     TIME 			NOT NULL,
     qtdDiaria       INT 			NOT NULL,
@@ -34,15 +34,15 @@ CREATE TABLE Locacao (
     idVendedor      INT 			NOT NULL,
     idCarro         INT 			NOT NULL,
     idcombustivel   INT 			NOT NULL,
-    FOREIGN KEY (idCliente) REFERENCES Cliente(idCliente),
-    FOREIGN KEY (idVendedor) REFERENCES Vendedor(idVendedor),
-    FOREIGN KEY (idCarro) REFERENCES Carro(idCarro)
+    FOREIGN KEY (idCliente) REFERENCES Cliente(idCliente), -- chave estrangeira para fazer a ligação entre as tabelas Cliente e Locação
+    FOREIGN KEY (idVendedor) REFERENCES Vendedor(idVendedor), -- chave estrangeira para fazer a ligação entre as tabelas Vendedor e Locação 
+    FOREIGN KEY (idCarro) REFERENCES Carro(idCarro) -- chave estrangeira para fazer a ligação entre as tabelas Carro e Locação
 )
 
 /*-------------------------------------------------------------------------------------*/
 DROP TABLE Cliente;
 CREATE TABLE Cliente (
-    idCliente       INT PRIMARY KEY NOT NULL,
+    idCliente       INT PRIMARY KEY NOT NULL, -- chave primária, identificador único
     nomeCliente     VARCHAR(100) 	NOT NULL,
     cidadeCliente   VARCHAR(40) 	NOT NULL,
     estadoCliente   VARCHAR(40) 	NOT NULL,
@@ -52,7 +52,7 @@ CREATE TABLE Cliente (
 /*-------------------------------------------------------------------------------------*/
 DROP TABLE Combustivel;
 CREATE TABLE Combustivel (
-    idcombustivel   INT PRIMARY KEY NOT NULL,
+    idcombustivel   INT PRIMARY KEY NOT NULL, -- chave primária, identificador único
     tipoCombustivel VARCHAR(20) 	NOT NULL
 )
 
