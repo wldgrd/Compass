@@ -35,27 +35,27 @@
 <br><br>
 #
 <br><br>
-**Verificação de população da tabela dim_data**
+**Verificação de população da tabela dim_data**  
 ![Verificação de população da tabela dim_data](/Sprint2/evidencias/dim_data.png)
 <br><br>
 #
 <br><br>
-**Verificação de população da tabela dim_carro**
+**Verificação de população da tabela dim_carro**  
 ![Verificação de população da tabela dim_carro](/Sprint2/evidencias/dim_carro.png)
 <br><br>
 #
 <br><br>
-**Verificação de população da tabela dim_cliente**
+**Verificação de população da tabela dim_cliente**  
 ![Verificação de população da tabela dim_cliente](/Sprint2/evidencias/dim_cliente.png)
 <br><br>
 #
 <br><br>
-**Verificação de população da tabela dim_vendedor**
+**Verificação de população da tabela dim_vendedor**  
 ![Verificação de população da tabela dim_vendedor](/Sprint2/evidencias/dim_vendedor.png)
 <br><br>
 #
 <br><br>
-**Verificação de população da tabela tabelaFato**
+**Verificação de população da tabela tabelaFato**  
 ![Verificação de população da tabela tabelaFato](/Sprint2/evidencias/tabelaFato.png)
 
 <br><br>
