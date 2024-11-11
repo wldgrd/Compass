@@ -13,7 +13,7 @@ SELECT
 	vlrDiaria
 FROM Locacao 
 
-SELECT *
+SELECT * -- verificando se foram feitas as inserções na tabelaFato
 FROM tabelaFato tf 
 
 /*-------------------------------------------------------------------------------------*/
@@ -30,7 +30,7 @@ SELECT
 	cb.tipoCombustivel
 FROM Carro cr LEFT JOIN Combustivel cb 
 
-SELECT *
+SELECT * -- verificando se foram feitas as inserções na tabela dim_carro
 FROM dim_carro dc 
 
 /*-------------------------------------------------------------------------------------*/
@@ -44,7 +44,7 @@ SELECT
 	paisCliente 
 FROM Cliente 
 
-SELECT *
+SELECT * -- verificando se foram feitas as inserções na tabela dim_cliente
 FROM dim_cliente dc
 
 /*-------------------------------------------------------------------------------------*/
@@ -57,7 +57,7 @@ SELECT
 	estadoVendedor 
 FROM Vendedor 
 
-SELECT *
+SELECT * -- verificando se foram feitas as inserções na tabela dim_vendedor
 FROM dim_vendedor dv 
 /*-------------------------------------------------------------------------------------*/
 
@@ -79,7 +79,7 @@ FROM Locacao
 /*OBS: as datas vieram formatadas com um '.' entre os valores e para que seja possível extrair o dia, mês e ano separadamente através do método SUBSTR
 é preciso fazer a remoção do ponto para que então a data fique no formato YYYYMMDD e daí sim recortarmos as substrings correspondentes.*/
 
-SELECT *
+SELECT * -- verificando se foram feitas as inserções na tabela dim_data
 FROM dim_data dd 
 
 /*-------------------------------------------------------------------------------------*/
