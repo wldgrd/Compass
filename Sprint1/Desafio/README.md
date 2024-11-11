@@ -23,7 +23,7 @@
 
     - Apagar o arquivo backup-dados-yyyymmdd.csv da pasta backup e o arquivo dados_de_vendas.csv da pasta vendas.  
 
-[O código completo pode ser acessado clicando aqui.](/Sprint%201/Desafio/etapa-1/processamento_de_vendas.sh)  
+[O código completo pode ser acessado clicando aqui.](/Sprint1/Desafio/etapa-1/processamento_de_vendas.sh)  
 
     
 O código usado para começar a primeira etapa e criar o diretório ecommerce:
@@ -79,7 +79,7 @@ cat vendas/backup/relatorio-*.txt > relatorio_final.txt
     - echo "Relatório Final" > relatorio_final.txt : Cria o arquivo relatorio_final.txt e escreve Relatório Final dentro dele
     - cat vendas/backup/relatorio-*.txt > relatorio_final.txt : Pega todos os arquivos cujo nome começa com relatorio- e que possuem a extensão .txt e adiciona seu conteúdo ao arquivo relatorio final.  
 
-Mais detalhes sobre o código e sua execução podem ser encontrados na seção [evidências](/Sprint%201/evidencias/README.md)  
+Mais detalhes sobre o código e sua execução podem ser encontrados na seção [evidências](/Sprint1/evidencias/README.md)  
 
 
 
