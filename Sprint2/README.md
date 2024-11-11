@@ -120,7 +120,7 @@ Nesse curso aprendemos conceitos básicos de computação na nuvem e serviços d
 # Links
 
 [📜**Certificados**](/Sprint2/certificados/)  
-[🕵️‍♂️**Evidências** ](/Sprint2/evidencias/)  
+[🕵️‍♂️**Evidências** ](/Sprint2/evidencias/README.md)  
 [💪**Exercícios**](/Sprint2/Exercicios/)  
 [🖳**Desafio - Parte 1 - Modelo Relacional**](/Sprint2/Desafio/etapa-1/)  
 [🖳**Desafio - Parte 2 - Modelo Dimensional**](/Sprint2/Desafio/etapa-2/)
