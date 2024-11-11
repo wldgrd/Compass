@@ -1,17 +1,4 @@
-SELECT *
-FROM tabelaFato tf 
-
-SELECT *
-FROM dim_carro dc 
-
-SELECT *
-FROM dim_cliente dc 
-
-SELECT *
-FROM dim_data dd 
-
-SELECT *
-FROM dim_vendedor dv 
+/*-------------------------------------------------------------------------------------*/
 
 INSERT INTO tabelaFato (idCliente, idVendedor, idCarro, dataLocacao, horaLocacao, dataEntrega, horaEntrega, qtdDiaria, vlrDiaria)
 SELECT 
@@ -26,7 +13,12 @@ SELECT
 	vlrDiaria
 FROM Locacao 
 
-INSERT OR IGNORE INTO dim_carro (id, km, classi, marca, modelo, ano, idcombustivel, tipoCombustivel)
+SELECT *
+FROM tabelaFato tf 
+
+/*-------------------------------------------------------------------------------------*/
+
+INSERT OR IGNORE INTO dim_carro (id, km, classi, marca, modelo, ano, idcombustivel, tipoCombustivel) -- aqui o comando 'OR IGNORE' foi usado para inserir apenas os IDs únicos 
 SELECT
 	cr.idCarro , 
 	cr.kmCarro , 
@@ -38,6 +30,11 @@ SELECT
 	cb.tipoCombustivel
 FROM Carro cr LEFT JOIN Combustivel cb 
 
+SELECT *
+FROM dim_carro dc 
+
+/*-------------------------------------------------------------------------------------*/
+
 INSERT INTO dim_cliente (id, nome, cidade, estado, pais)
 SELECT
 	idCliente,
@@ -47,6 +44,11 @@ SELECT
 	paisCliente 
 FROM Cliente 
 
+SELECT *
+FROM dim_cliente dc
+
+/*-------------------------------------------------------------------------------------*/
+
 INSERT INTO dim_vendedor (id, nome, sexo, estado)
 SELECT
 	idVendedor ,
@@ -54,6 +56,10 @@ SELECT
 	sexoVendedor ,
 	estadoVendedor 
 FROM Vendedor 
+
+SELECT *
+FROM dim_vendedor dv 
+/*-------------------------------------------------------------------------------------*/
 
 INSERT INTO dim_data (id, dataLocacao, diaLocacao, mesLocacao, anoLocacao, horaLocacao, dataEntrega, horaEntrega, diaEntrega, mesEntrega, anoEntrega)
 SELECT 
@@ -70,5 +76,10 @@ SELECT
 	SUBSTR(REPLACE(dataEntrega, '.', ''), 1, 4) AS anoEntrega
 FROM Locacao 
 
+/*OBS: as datas vieram formatadas com um '.' entre os valores e para que seja possível extrair o dia, mês e ano separadamente através do método SUBSTR
+é preciso fazer a remoção do ponto para que então a data fique no formato YYYYMMDD e daí sim recortarmos as substrings correspondentes.*/
+
 SELECT *
 FROM dim_data dd 
+
+/*-------------------------------------------------------------------------------------*/
