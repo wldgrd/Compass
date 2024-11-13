@@ -1,5 +1,6 @@
 #Escreva um programa que lê o conteúdo do arquivo texto arquivo_texto.txt e imprime o seu conteúdo.
 
-texto = open('feedbacks.txt')
+texto = open('arquivo_texto.txt')
 for palavra in texto:
-    print(palavra)
+    print(palavra, end = '')
+texto.close()
