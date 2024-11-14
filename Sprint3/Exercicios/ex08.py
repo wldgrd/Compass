@@ -9,12 +9,9 @@
 # A palavra: moto não é um palíndromo
 
 palavras = ['maça', 'arara', 'audio', 'radio', 'radar', 'moto']
-invertidas = []
-for palavra in palavras:
-    invertidas.append(palavra[::-1])
 
-for i in range(len(palavras)):
-    if palavras[i] == invertidas[i]:
-        print("A palavra:", palavras[i], "é um palíndromo")
+for palavra in palavras:
+    if palavra[::-1] == palavra[::]:
+        print('A palavra: {} é um palíndromo'.format(palavra))
     else:
-        print("A palavra:", palavras[i], "não é um palíndromo")
+        print('A palavra: {} não é um palíndromo'.format(palavra))

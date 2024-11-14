@@ -2,7 +2,7 @@
 # Esta função aplica a função recebida para cada elemento da lista recebida e retorna o resultado em uma nova lista.
 # Teste sua função com a lista de entrada [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] e com uma função que potência de 2 para cada elemento.
 
-def my_map(lista, f):
+'''def my_map(lista, f):
 
     resultado = []
     for elemento in lista:
@@ -10,8 +10,19 @@ def my_map(lista, f):
     return resultado
 
 def quadrado(num):
-    return num**2
+    return num**2'''
 
 a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+#print(my_map(a, quadrado))
+
+
+def my_map(lista, f):
+    resultado = [f(elemento) for elemento in lista]
+    return  resultado
+
+
+def quadrado(num):
+    return num**2
 
 print(my_map(a, quadrado))
