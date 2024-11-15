@@ -15,3 +15,5 @@ for palavra in palavras:
         print('A palavra: {} é um palíndromo'.format(palavra))
     else:
         print('A palavra: {} não é um palíndromo'.format(palavra))
+
+        
