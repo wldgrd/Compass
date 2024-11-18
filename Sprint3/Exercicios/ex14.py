@@ -3,7 +3,7 @@ e um número variado de parâmetros nomeados e imprime o valor de cada parâmetr
 Teste sua função com os seguintes parâmetros:
 (1, 3, 4, 'hello', parametro_nomeado='alguma coisa', x=20)'''
 
-def func(*nao_nomeados, **nomeados):
+def func(*nao_nomeados, **nomeados): # *args , **kwargs
     #print('Não nomeados: ', len(nao_nomeados))
     for valor in nao_nomeados:
         print(valor)
