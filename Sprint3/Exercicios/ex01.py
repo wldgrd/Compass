@@ -5,4 +5,4 @@ nome = 'Welder'
 
 idade = 33
 
-print(2024+67)
+print(2024+100 - idade)
