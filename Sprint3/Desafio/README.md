@@ -11,23 +11,25 @@ Esperamos que haja, minimamente:
 
 # Etapas
 
+## **1. Preparação do ambiente**  
 
-1. ... [Etapa I](etapa-1)
+Nessa etapa devemos nos certificar que as bibliotecas Pandas e Matplotlib estejam instaladas. Para isso foi executado o código abaixo e nenhum erro foi retornado pois as bibliotecas já haviam sido previamente instaladas.
 
-    Nessa etapa pode-se perceber com esse código:
-    ```
-    Esta é uma linha de código
-    ```
-    Obtive esse retorno
-    ![Evidência](../Evidencias/sample.webp)
+```python
+import pandas as pd
+import matplotlib.pyplot as plt #importado módulo pyplot
+```
 
-2. ... [Etapa II](etapa-2)
+## **2. Desenvolvimento do Desafio**
 
-    Já com esse código, o objetivo é ...
+**O código foi dividido em 5 áreas:**  
+    - Importação das bibliotecas  
+    - Definição de funções auxiliares  
+    - Carregamento dos dados  
+    - Tratamento dos dados  
+    - Execução das perguntas  
 
-    ```
-    Esta é uma outra linha de código
-    ```
+
     
 
 
