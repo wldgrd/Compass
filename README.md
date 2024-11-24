@@ -1,18 +1,5 @@
 # Olá, eu sou Welder Garrido👋
 
-
-
-<div align="center">
-  <a href="www.linkedin.com/in/weldergarrido" target="_blank">
-    <img src=img/logos/linkedin_logo.svg height="25" alt="linkedin logo"  />
-  </a>
-  <a href="wldgrd" target="_blank">
-    <img src=img/logos/discord_logo.svg height="25" alt="discord logo"  />
-  </a>
-</div>
-
----
-
 <br>
 
 <div align="center">
