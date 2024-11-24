@@ -11,12 +11,12 @@ Nessa Sprint aprendemos conceitos gerais como a noção de algorítmo e as estru
 
 Dentro do conteúdo estão os seguintes tópicos:  
 **Tipos Básicos**  
-    - int
-    - float
-    - boolean
-    - string
-    - lista
-    - dicionários  
+    - int  
+    - float  
+    - boolean  
+    - string  
+    - lista  
+    - dicionários    
 
 **Variáveis**  
     - Espaços reservados na memória para guardar determinado valor  
