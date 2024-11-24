@@ -176,10 +176,9 @@ teste(parametros) #sem uso do operador *
 
 # Links
 [📜**Certificados**](/Sprint3/Certificados/certificado_AWS%20Course%20Completion%20Certificate.pdf)  
-[🕵️‍♂️**Evidências** ]()  
+[🕵️‍♂️**Evidências** ](/Sprint3/Evidencias/)  
 [💪**Exercícios**](/Sprint3/Exercicios/)  
-[🖳**Desafio**]()  
-[🖳**Desafio - Parte 1 - Preparação de Ambiente**]()  
-[🖳**Desafio - Parte 2 - Desenvolvimento**]()
+[🖳**Desafio**](/Sprint3/Desafio/README.md)  
+[🖳**Desafio - Desenvolvimento**](/Sprint3/Desafio/etapa-2/)
 
 
