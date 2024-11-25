@@ -1,9 +1,3 @@
-# Instruções
-
-- Uma ou mais seções para descrever o que estiver aprendendo (resumo), de maneira estruturada.
-
-- Breve conteúdo de cada pasta relacionada a sprint.
-
 # Resumo
 
 ## **Linguagem Python**  
