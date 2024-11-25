@@ -50,7 +50,7 @@ Aqui faço o carregamento dos dados e uma cópia de segurança e verifico a exec
 **4.2 Verificando as linhas duplicadas** 
 ![Verificando Duplicatas](../Evidencias/verificando_duplicatas.png)  
 
-**4.3 Removendo as linhas duplicadas** 
+**4.3 Removendo as linhas duplicadas**  
 Note que aqui o número de linhas do dataframe resultante é 9660, que é exatamente a diferença entre o número de linhas inicial do dataframe e as linhas duplicadas (10841 - 1181 = 9660).
 ![Removendo as Linhas Duplicadas](../Evidencias/removendo_duplicatas.png)  
 
