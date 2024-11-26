@@ -54,7 +54,7 @@ Gosto muito de ler, ouvir música, ver filmes, seriados, estar com o meu companh
 ### **Linguagens:** 
 -Python (Ênfase em Análise de Dados. Bibliotecas: Pandas, Numpy)<br>
 -SQL<br>
--Bash
+-Shell Script
 
 ### **BDs:** 
 -SQLite<br>
