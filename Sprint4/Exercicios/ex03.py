@@ -14,3 +14,20 @@ Além de utilizar lambdas, você deverá aplicar, obrigatoriamente, as seguintes
 reduce (módulo functools)
 map'''
 
+from functools import reduce 
+
+def calcula_saldo(lancamentos):
+    valores = map(lambda x: x[0] if x[1] == 'C' else -x[0], lancamentos)
+
+    saldo_resultante = reduce(lambda soma, x: soma + x, valores)
+
+    return saldo_resultante
+
+lancamentos = [
+    (200,'D'),
+    (300,'C'),
+    (100,'C')
+]
+
+exemplo = calcula_saldo(lancamentos)
+print(exemplo)
