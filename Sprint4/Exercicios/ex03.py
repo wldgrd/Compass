@@ -17,17 +17,11 @@ map'''
 from functools import reduce 
 
 def calcula_saldo(lancamentos):
+    #mapeando os valores de crédito e débito
     valores = map(lambda x: x[0] if x[1] == 'C' else -x[0], lancamentos)
-
+    #usando o reduce para fazer o acumulador soma
     saldo_resultante = reduce(lambda soma, x: soma + x, valores)
 
     return saldo_resultante
 
-lancamentos = [
-    (200,'D'),
-    (300,'C'),
-    (100,'C')
-]
 
-exemplo = calcula_saldo(lancamentos)
-print(exemplo)
