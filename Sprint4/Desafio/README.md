@@ -1,13 +1,3 @@
-# Instruções
-
-Neste arquivo você apresentará suas entregas referentes ao desafio. Utilize o diretório "Desafio" para organizar seus artefatos e este README.md para fazer referência aos arquivos de código-fonte e demais entregáveis solicitados.
-
-Esperamos que haja, minimamente:
-
-- Passo a passo para obter o resultado entregue do desafio.
-- Trechos de códigos e suas explicações.
-- Relacionamento com a pasta de evidências (imagens).
-
 # Objetivo  
 O objetivo é a prática de Python com Containers Docker combinando conhecimentos adquiridos no PB.
 
@@ -18,7 +8,7 @@ O objetivo é a prática de Python com Containers Docker combinando conhecimento
 
 Construa uma imagem a partir de um arquivo de instruções Dockerfile que execute o código carguru.py. Após, execute um container a partir da imagem criada. 
 
-O código do arquivo carguru.py:  
+O código do arquivo [carguru.py](../Desafio/etapa-1/carguru.py):  
 ```python
 import random
 
@@ -38,7 +28,7 @@ random_carros = random.choice(carros)
 print('Você deve dirigir um '+ random_carros)
 ```
 
-Código do arquivo Dockerfile:
+Código do arquivo [Dockerfile](../Desafio/etapa-1/Dockerfile):
 ```Docker
 FROM python:3.9-slim 
 
@@ -152,7 +142,7 @@ Abaixo seguem as instruções.
 
 4. Registrar o conteúdo do script Python, arquivo Dockerfile e comando de inicialização do container neste espaço.  
 
-O código do script mascara.py pode ser visto a seguir:
+O código do script [mascara.py](../Desafio/etapa-3/mascara.py) pode ser visto a seguir:
 ```python 
 import hashlib
 
@@ -171,7 +161,7 @@ while continua:
 ```  
 O código tem o intuito de enviar uma string para codificação através do comando **hashlib.sha1(entrada.encode())**. O usuário pode digitar uma string, enviar, receber o hash como resposta e repetir o processo quantas vezes for necessário. Ao final das codificações, para que o programa termine sua execução, o usuário deverá digitar **sair**.  
 
-Para a construção do container foi usado o código:  
+Para a construção do container foi criado o arquivo [Dockerfile](../Desafio/etapa-3/Dockerfile) com o código:  
 ```docker
 FROM python:3.9-slim 
 
