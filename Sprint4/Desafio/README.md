@@ -184,7 +184,7 @@ E depois o container foi executado no terminal em modo iterativo com o comando:
 docker run -it mascarar-dados
 ```  
 Uma vez que o terminal executou o script mascara.py, algumas strings foram enviadas para codificação como ilustra a figura abaixo.  
-![hashes]()  
+![hashes geradas](../Evidencias/hashes_teste.png)  
 
 Como pode ser observado na imagem anterior, o script se comportou dentro do esperado e sua execução dentro do container foi performada com sucesso.  
 
