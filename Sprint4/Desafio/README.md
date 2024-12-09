@@ -52,7 +52,7 @@ docker build -t carguru .
 ```
 - **docker build**: comando usado para a consrução da imagem.  
 - **-t carguru**: define uma tag para a imagem  
-- **.** : o uso do **.** especifica que a construção do container deve er feito no diretório atual.   
+- **.** : o uso do **.** especifica que a construção do container deve ser feito no diretório atual.   
 
 Ao rodar esse comando, o resultado a seguir foi obtido.  
 ![Build carguru](../Evidencias/build_carguru.png)  
