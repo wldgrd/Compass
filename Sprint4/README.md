@@ -28,6 +28,9 @@ utilizando a flag -a, temos também todos os containers já executados na máqui
 - **docker run -d -p 80:80 \<container>** --> modo background e expõe a porta 80  
 - **docker stop \<container>** serve para parar  container    
 
+# Parando Containers  
+- **docker stop \<nomeDoContainer>**
+
 # Reiniciando Containers  
 
 - **docker start \<id>**  
