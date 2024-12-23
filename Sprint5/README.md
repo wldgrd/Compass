@@ -1,72 +1,27 @@
 # Resumo
-# Para rodar um container:
+Nessa sprint aprendemos sobre diversos serviços da AWS tais como EC2, IAM, RDS, S3 e VPC, praticamos através dos laboratórios propostos no game Cloud Quest e também das questões no curso preparatório.
 
-**docker run <nome_do_container>** --> executa e para
+Aqui darei destaque para o serviço **Amazon S3 (Simple Storage Service)** que foi o serviço que usamos no desenvolvimento de ambos exercício e desafio da sprint.  
 
-**docker run -it <nome_do_container>** --> executa e mantém aberto 'modo de iteração'
+# Como funciona o Amazon S3
+O Amazon Simple Storage Service (Amazon S3) é um serviço de armazenamento de objetos que oferece escalabilidade, disponibilidade de dados, segurança e performance líderes do setor. Clientes de todos os portes e setores podem armazenar e proteger qualquer quantidade de dados de praticamente qualquer caso de uso, como data lakes, aplicações nativas da nuvem e aplicações móveis. Com classes de armazenamento econômicas e recursos de gerenciamento fáceis de usar, você pode otimizar custos, organizar dados e configurar controles de acesso ajustados para atender a requisitos específicos de negócios, organizacionais e de conformidade.
 
-**docker ps** ou **docker container ls** -->  exibe quais containers estão sendo executados no momento
+![Esquemático S3](../img/s3.png)
+Fonte: https://aws.amazon.com/pt/s3/ (acesso em 23/12/2024)  
 
-utilizando a flag -a, temos também todos os containers já executados na máquina: **docker ps -a** ou **docker container ls -a**
+Podemos criar um bucket no S3 de modo manual ou via script. Aqui estão os passos para criação manual e no [readme](./Desafio/README.md)  do desafio está ilustrado um exemplo de código para criação de bucket via script.  
 
+Passos:  
+    **1**. Faça login no console da AWS como usuário com privilégios de **administrador**.  
+    **2**. Selecione o serviço **S3**.  
+    **3**. Clique em **criar bucket**.   
+    **4**. Insira um **nome** para o bucket.  
+    **5**. Selecione uma **região** AWS.  
+    **6**. Clique em **criar bucket**.
 
-# Container != VM:	
-- container é uma aplicação que serve para determinado fim,**não possui sistema operacional**, seu tamanho é de alguns MBs  
-- **VM** possui S.O. próprio, tamanho de GBs, pode executar diversas funções  
-- Containers acabam gastando menos recursos para serem executados, por causa do seu uso específico  
-- VMs gastam mais recursos, porém podem exercer mais funções  
-
-# Executar container no background  
-
-- quando iniciamos um container que persiste, **ele fica ocupando o terminal**  
-- podemos executar em background, para não ficar com várias abas de terminal aberto  
-- comando: **docker run -d \<container>** 
-
-# Expondo portas  
-- Os containers de docker não têm conexão com nada de fora deles  
-- Por isso, precisamos expor portas, a flag é **-p** e podemos fazer assim: **-p 80:80**  
-- **docker run -d -p 80:80 \<container>** --> modo background e expõe a porta 80  
-- **docker stop \<container>** serve para parar  container    
-
-# Parando Containers  
-- **docker stop \<nomeDoContainer>**
-
-# Reiniciando Containers  
-
-- **docker start \<id>**  
-- lembre-se que o **run** sempre cria um container novo  
-
-# Definindo Nome do Container  
-
-- usamos a flag **--name**  
-- se não colocamos, recebemos um **nome aleatório**, que pode ser um problema para uma aplicação profissional  
-- a flag **run** é inserida junto do **comando run**  
-- docker run -d -p 80:80 --name nginx_app nginx  
-
-# Verificando os logs  
-
-- Podemos verificar **o que aconteceu com um container**
-- **docker logs \<id>**
-
-# Removendo Container  
-
-- Podemos **remover um container da máquina** que estamos executando o docker  
-- Comando: **docker rm \<id>**  
-- se o container estiver rodando ainda, podemos utilizar a **flag -f** (force)  
-- O container removido não é mais listado em docker ps -a  
-
-# Criando uma imagem  
-
-- Para criar uma imagem você precisará de um arquivo **Dockerfile** em uma pasta que ficará o projeto  
-- Este arquivo precisará de algumas instruções para ser executado  
-- **FROM**: imagem base  
-- **WORKDIR**: diretório da aplicação  
-- **EXPOSE**: porta da aplicação  
-- **COPY**: quais arquivos precisam ser copiados  
-- **CMD**: define o comando padrão que sera executado quando o container for iniciado.
 
 # Links
-[📜**Certificados**](/Sprint4/Certificados/)  
-[🕵️‍♂️**Evidências** ](/Sprint4/Evidencias/)  
-[💪**Exercícios**](/Sprint4/Exercicios/)  
-[🖳**Desafio**](/Sprint4/Desafio/README.md)  
+[📜**Certificados**](/Sprint5/Certificados/)  
+[🕵️‍♂️**Evidências** ](/Sprint5/Evidencias/)  
+[💪**Exercícios**](/Sprint5/Exercicios/)  
+[🖳 **Desafio**](/Sprint5/Desafio/README.md)  
