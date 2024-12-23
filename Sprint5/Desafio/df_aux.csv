@@ -1,0 +1,7 @@
+codigo_ibge,anomes_s,cebas_cnpj_entidade_s,cebas_razao_social_entidade_s,cebas_status_certificacao_s,cebas_cod_status_certificacao_i,cebas_dt_inicio_certificacao_s,cebas_dt_fim_certificacao_s,cebas_dt_extracao_dados_s,duracao_dias
+160060.0,202410,12.704.750/0001-23,Associação casa da hospitalidade,VIGENTE,2,2021-11-06,2025-12-31,24/10/2024,1516
+354340.0,202410,51.820.785/0001-80,Cantinho do céu hospital de retaguarda,VIGENTE,2,2021-10-06,2025-12-31,24/10/2024,1547
+160060.0,202407,12.704.750/0001-23,Associação casa da hospitalidade,VIGENTE,2,2021-11-06,2025-12-31,03/07/2024,1516
+354340.0,202407,51.820.785/0001-80,Cantinho do céu hospital de retaguarda,VIGENTE,2,2021-10-06,2025-12-31,03/07/2024,1547
+160060.0,202211,12.704.750/0001-23,Associação casa da hospitalidade,VIGENTE,2,2021-11-06,2025-12-31,17/11/2022,1516
+354340.0,202211,51.820.785/0001-80,Cantinho do céu hospital de retaguarda,VIGENTE,2,2021-10-06,2025-12-31,17/11/2022,1547
