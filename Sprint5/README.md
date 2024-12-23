@@ -24,11 +24,7 @@ Passos:
 O Amazon EC2 é um serviço da AWS que oferece capacidade computacional na nuvem, segura e redimensionável. Foi projetado para facilitar a computação em nuvem e seus recursos são elásticos, isto é, podem ser configurados para escalar automaticamente conforme demanda. O serviço também permite criar e executar quase todos os tipos de aplicação, oferece uma grande variedade de tipos de instâncias otimizadas para cada necessidade e permite que tudo seja customizável.   
 
 ## Amazon IAM (Identity and Access Management)  
-O Amazon IAM é um serviço da AWS que permite controlar o acesso a recursos e serviços AWS de forma segura.  O serviço pode ser utilizado para gerenciar usuários, credenciais de segurança e permissões, especificar quem pode acessar quais recursos e serviços da AWS, determinar as condições de acesso, proteger recursos da AWS.  
-
-
-
-
+O Amazon IAM é um serviço da AWS que permite controlar o acesso a recursos e serviços AWS de forma segura.  O serviço pode ser utilizado para gerenciar usuários, credenciais de segurança e permissões, especificar quem pode acessar quais recursos e serviços da AWS, determinar as condições de acesso, proteger recursos da AWS. 
 
 # Links
 [📜**Certificados**](/Sprint5/Certificados/)  
