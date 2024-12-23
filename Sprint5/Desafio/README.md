@@ -1,191 +1,335 @@
 # Objetivo  
-O objetivo é a prática de Python com Containers Docker combinando conhecimentos adquiridos no PB.
+O objetivo é praticar os conhecimentos da AWS.
 
-# Etapas
-
-
-**Etapa - 1**
-
-Construa uma imagem a partir de um arquivo de instruções Dockerfile que execute o código carguru.py. Após, execute um container a partir da imagem criada. 
-
-O código do arquivo [carguru.py](../Desafio/etapa-1/carguru.py):  
-```python
-import random
-
-carros = ['Chevrolet Agile','Chevrolet C-10','Chevrolet Camaro','Chevrolet Caravan',
-          'Chevrolet Celta','Chevrolet Chevette','Chevrolet Corsa','Chevrolet Covalt',
-          'Chevrolet D-20','Chevrolet Monza','Chevrolet Onix','Chevrolet Opala','Chevrolet Veraneio',
-          'Citroën C3','Fiat 147','Fiat Argo','Fiat Cronos','Fiat Mobi','Fiat Panorama','Ford Corcel',
-          'Ford Escort','Ford F-1000','Ford Ka','Ford Maverick','Honda City','Honda Fit','Hyundai Azera',
-          'Hyundai HB20','Hyundai IX-35','Hyundai Veloster','Peugeot 2008','Peugeot 206','Peugeot 208',
-          'Peugeot 3008','Peugeot 306','Peugeot 308','Renault Kwid','Renault Logan','Renault Sandero',
-          'Renault Twingo','Renault Zoe','Toyota Etios','Toyota Yaris ','Volkswagen Apolo','Volkswagen Bora',
-          'Volkswagen Brasilia   ','Volkswagen Fusca','Volkswagen Gol','Volkswagen Kombi','Volkswagen Parati',
-          'Volkswagen Passat','Volkswagen Polo','Volkswagen SP2','Volkswagen Santana','Volkswagen Voyage','Volkswagen up!']
-
-random_carros = random.choice(carros)
-
-print('Você deve dirigir um '+ random_carros)
-```
-
-Código do arquivo [Dockerfile](../Desafio/etapa-1/Dockerfile):
-```Docker
-FROM python:3.9-slim 
-
-COPY carguru.py /app/carguru.py
-
-WORKDIR /app 
-
-CMD ["python", "carguru.py"]
-```
-O código Docker acima tem o intuito de definir a imagem base, **python 3.9-slim**, que é uma versão mais leve do Python que escolhi para efeito de redução no tamanho da imagem.  
-
-O comando **COPY** copia o arquivo carguru.py para o diretório /app na imagem Docker e mantém o nome do arquivo.  
-
-O comando **WORKDIR** configura o diretório padrão de trabalho.  
-
-O comando **CMD** define o que será executado ao iniciar o container e, no caso, executará o script carguru.py usando o Python.  
-
-Para construir o container foi usado, no terminal, o comando:
-```
-docker build -t carguru .
-```
-- **docker build**: comando usado para a consrução da imagem.  
-- **-t carguru**: define uma tag para a imagem  
-- **.** : o uso do **.** especifica que a construção do container deve ser feito no diretório atual.   
-
-Ao rodar esse comando, o resultado a seguir foi obtido.  
-![Build carguru](../Evidencias/build_carguru.png)  
-
-Em seguida, foi executado o comando:  
-```bash 
-docker run carguru
-```
-A resposta obtida foi:  
-![Run 1 vez](../Evidencias/run_carguru.png)
-
-Para fins de teste, o comando foi executado novamente e a resposta obtida foi:  
-![Run 2 vez](../Evidencias/run_carguru2.png)  
-
-**Etapa - 2**  
-É possível reutilizar containers? Em caso positivo, apresente o comando necessário para reiniciar um dos containers parados em seu ambiente Docker? Não sendo possível reutilizar, justifique sua resposta. 
-
-Sim, é possivel reutilizar os containers Docker que foram parados.  
-
-Para listar os containers que já foram executados na máquina, executa o comando: 
-
-```bash
-docker ps -a
-```
-Como resposta você obterá uma lista dos containers já rodados em sua máquina, como mostra a figura a seguir.
-
-![docker ps -a ](../Evidencias/dockerps-a_carguru.png)
-
-Através da lista podemos obter o ID e o nome do container e então reutilizá-lo através do comando:
-
-```bash
-docker start <containerID>
-```
-ou ainda :
-```bash
-docker start <NomeDoContainer>
-```  
-
-É interessante ressaltar que os comandos servem tanto para o ID, quanto para o nome do container, mas também servem para parte do ID.
-
-| **CONTAINER ID**   | **IMAGE**     | **COMMAND**               | **CREATED**          | **STATUS**                       | **PORTS** | **NAMES**         |
-|----------------|-----------|-----------------------|------------------|------------------------------ |-------|---------------|
-| 4e90b90161ec   | carguru   | "python carguru.py"   | 25 minutes ago   | Exited (0) About a minute ago |       | sharp_carver  |  
-
-A tabela acima ilustra a primeira linha de resposta ao comando docker ps -a da figura anterior.  
-Para iniciarmos o container, podemos executar os comandos:
-```bash
-docker start 4e90b90161ec
-```
-```bash
-docker start sharp_carver
-```
-
-Ou ainda usando apenas parte do ID, por exemplo:
-```bash
-docker start 4e9
-```
-
-Abaixo segue figura ilustrando a execução com parte do ID e usando o terminal iterativo através da flag -ai.
-
-```bash
-docker start -ai 4e9
-```
-Obtendo o resultado abaixo.  
-![start com parte do ID](../Evidencias/start_parte_ID.png)
-
-
-**Observações gerais**  
-
-Apesar de ser possível reutilizar containers, há situações em que a prática é mais (ou menos) recomendada.  
-A arquitetura de construção Docker permite que possamos tratar os containers como descartáveis, pois isso pode ajudar a eliminar quaisquer inconsistências ou resíduos que estiverem no projeto a ser executado.  
-Por outro lado, reutilizar containers pode ser uma forma de economia de tempo caso o ambiente seja estável e se você deseja manter as configurações utilizadas anteriormente.  
-
-**Etapa - 3**  
-Agora vamos exercitar a criação de um container que permita receber inputs durante sua execução.
-Abaixo seguem as instruções.
+# Instruções Gerais do Desafio  
+**1**. Procure um arquivo CSV ou JSON no portal de dados públicos do Governo Brasileiro http://dados.gov.br
+			- Garanta que seu arquivo seja único na sua turma.
+			
+**2**. Analise o conjunto de dados escolhido localmente em editor de texto de sua preferência
+		para você conhecer os dados e o que pode ser analisado.
+	
+**3**. A partir de um script Python, carregue o arquivo para um bucket novo, para executar o 
+		desafio. Utilize a biblioteca boto3.
 		
-1. Criar novo script Python que implementa o algorítmo a seguir:
-    - receber uma string via input 
-    - gerar o hash da string por meio do algorítmo SHA-1
-    - Imprimir o hash em tela, utilizando o método hexdigest 
-    - Retornar ao passo 1
+**4**. Em outro script Python e a partir do arquivo que está dentro do S3, crie um dataframe 
+com Pandas ou Polars e execute as seguintes manipulações:  
     
-2. Criar uma imagem Docker chamada mascarar-dados que execute o script Python criado anteriormente.
+- **4.1** Uma cláusula que filtra dados usando ao menos dois operadores lógicos
 
-3. Iniciar um container a partir da imagem, enviando algumas palavras para mascaramento.
+- **4.2** Duas funções de agregação
 
-4. Registrar o conteúdo do script Python, arquivo Dockerfile e comando de inicialização do container neste espaço.  
+- **4.3** Uma função condicional 
 
-O código do script [mascara.py](../Desafio/etapa-3/mascara.py) pode ser visto a seguir:
+- **4.4** Uma função de conversão
+
+- **4.5** Uma função de data
+
+- **4.6** Uma função de string
+    
+**OBS**: Caso conseguir executar todas e retornar somente uma resposta, melhor será sua avaliação.
+    
+**5**. Após concluir essas etapas, salve o arquivo no formato csv e envie para o mesmo bucket criado para esse desafio. 
+    Utilize boto3.
+    
+**6**. Armazene no Git um arquivo MD explicando seu conjunto de dados, bem como sua(s) consultas e o resultado da execução de suas consultas. Lembre-se:
+    - Armazene o(s) arquivo(s) CSV.
+    - Armazene o(s) arquivo(s) PY.
+    - Armazene as evidências de execução com imagens JPEG ou PNG.
+
+# Dataset 'cebas.csv'  
+**CEBAS - Certificação de Entidades Beneficentes de Assistência Social** 
+
+Neste conjunto de dados temos as seguintes variáveis:
+
+**codigo_ibge**: código ibge do município.
+
+**anome_s**: ano e mês de referência.
+
+**cebas_cnpj_entidade_s**: Número de identificação do Cadastro Nacional de Pessoa Jurídica (CNPJ).
+
+**cebas_razao_social_entidade_s**: Nome da Entidade constante no CNPJ.
+
+**cebas_status_certificacao_s**: Status da Certificação, podendo ser válida (possui requerimento de 
+renovação protocolado tempestivamente, aguardando decisão de mérito) ou vigente 
+(CEBAS deferido com data da validade da Certificação constante na portaria de deferimento publicada 
+no Diário Oficial da União).
+
+**cebas_cod_status_certificacao_i**: Código do status da certificação, 1 - Válida, 2 - Vigente.
+
+**cebas_dt_inicio_certificacao_s**: Data de início da certificação.
+
+**cebas_dt_fim_certificacao_s**: Data fim da certificação.
+
+**cebas_dt_extracao_dados_s**: Data da extração dos dados.
+
+**cebas_qtd_certif_status_valida_i**: Quantidade de Entidades com status de Certificação válida.
+
+**cebas_qtd_certif_status_vigente_i**: Quantidade de Entidades com status de Certificação vigente.
+
+
+
+# Criação do Bucket  
+Para a criação do bucket foi usado o script a seguir, criado a partir da referência da [documentação do boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/s3-examples.html) da própria AWS.
+
 ```python 
-import hashlib
+import boto3
+from botocore.exceptions import ClientError, NoCredentialsError
 
-continua = True 
+# Configurações de credenciais
+aws_access_key_id = 'ASIAWPPO6JPYDI4PWN4J'
+aws_secret_access_key = '8LGL2c6smjKi14nafGkSnWBbaUTD++oA31FUPewV'
+session_token = 'IQoJb3JpZ2luX2VjEA8aCXVzLWVhc3QtMSJGMEQCICZ4ZJEDNIcgyxuevdK+SCsNdzf35MqxdHLPvXPw6e4uAiAf1UwwqIWXk6cPit0bVcGLlLr/xy+EDaX4cUxWVO+HQyqqAwjY//////////8BEAAaDDQ0NTU2NzA5Mzc0NCIM8oEgKde1d+ysuexxKv4CnFswsgNSVTrFEjIWBgnlZGIJJuj4XkDpkwmjZ94SRLgij/DMAqDmCmJD6MejE1RoYEks0B6X7BwZbmUnO3/eqoGd8y185hj0pxE7UFa3vxrnn1JKQ9EyuBaJnBUYqndWaojF6sW7SxmtJKcoP8iDcPiFFY82YfwWByOAgBzFRJhAuRg8HDawIemPdt9w/DZmVly3XbrbheaZScAO7TdWESRWlLkbyEYdD8tvxGelGsA6m/HI/j7z96Tlb6S9k9a6Ht3S6SQRect5YPEJdsNv4pmOl1mbFYjQBmBnDI9zFZiC7aCzpVMUW35ONtYPTH1jLSL0EGjcRNNdvMSMf7sJhk4FXLNa3kyxPW4dZhILk+Np85UHmXYO2HAmvT6q5/OeXvKw1Sz42HK5ccLoA/YpS+VJUK4GJkK4wosU7+K+msOVTVQcY1imSlZp+bYSXE9CAgDmhSn05W+8/bdTcc0JDdT8jR795QfmRr8y6HvaqJOg0jrotIzuhfAsDhmJ7TD77aW7BjqnASUtoZJbN3n7Vm/ibed3yDJrb2yCa7MJg7yYokyJIn++bIqYuxHGInTcUniOfKtjUWE1BiadfwUE0zrVQmOuhBMfXJ5fbiphOpzduUnYXw6p0WXobF7JeLjYWM4gjx3Y+9tBFXpIwV2gzyH5yCECz3j7lx4fXjv5djVXSDUrbWjFbcskDEPc/qP1sjWG5FTSy2tGrrQBnjxzIMFdBrS/RrFK8/ODC9EJ'
 
-while continua:
-    entrada = input("Digite uma sentença ou 'sair' para encerrar.\n")
+#Configurações adicionais
+region_name = 'us-east-1'
+bucket_name = 'desafio-sprint05-welder'
 
-    if entrada.strip().lower() == 'sair':
-        print('Fechando a aplicação.')
-        continua = False
-    else:
-        cod_hash = hashlib.sha1(entrada.encode())
-        print('Hash gerado através da entrada fornecida:')
-        print(cod_hash.hexdigest())
+#Informações do arquivo
+file_path = 'cebas.csv'
+object_name = 'cebas-dataset.csv'
+
+def criar_bucket(aws_access_key_id, aws_secret_access_key, session_token, region_name, bucket_name):
+        try:
+            #Criando client s3
+            s3_client = boto3.client('s3', 
+                        aws_access_key_id = aws_access_key_id,
+                        aws_secret_access_key = aws_secret_access_key,
+                        aws_session_token = session_token,
+                        region_name = region_name )
+                        
+            #Criando o Bucket
+            if region_name == 'us-east-1':
+                response = s3_client.create_bucket(Bucket = bucket_name)
+            
+            else:
+                response = s3_client.create_bucket(Bucket = bucket_name, CreateBucketConfiguration = {'LocationConstraint': region_name} )
+                
+            print(f"Bucket '{bucket_name}' criado com sucesso.")
+            return response 
+            
+        except ClientError as cError:
+            print(f"Erro ao criar bucket: {cError}")
+            return None
 ```  
-O código tem o intuito de enviar uma string para codificação através do comando **hashlib.sha1(entrada.encode())**. O usuário pode digitar uma string, enviar, receber o hash como resposta e repetir o processo quantas vezes for necessário. Ao final das codificações, para que o programa termine sua execução, o usuário deverá digitar **sair**.  
+O script acima contém as credenciais de acesso à AWS para que seja feito de forma mais didática, porém é entendido como uma boa prática não colocar tais informações dentro do script. Uma outra maneira de configurar as credenciais é através do **aws configure** via terminal. Após seguir as solicitações necessárias, serão criados os arquivos credentials e config na pasta padrão da AWS (**.aws**) que servirão de referência para o boto3 fazer a autenticação.  
 
-Para a construção do container foi criado o arquivo [Dockerfile](../Desafio/etapa-3/Dockerfile) com o código:  
-```docker
-FROM python:3.9-slim 
+Dentro do mesmo script python também existe o código a seguir:  
+```python
+def enviar_arquivo(aws_access_key_id, aws_secret_access_key, session_token, bucket_name, file_path, object_name):
+    
+    s3 = boto3.client('s3', 
+                        aws_access_key_id = aws_access_key_id,
+                        aws_secret_access_key = aws_secret_access_key,
+                        aws_session_token = session_token)
+                        
+    try:
+        s3.upload_file(file_path, bucket_name, object_name)
+        print(f"o Upload do arquivo '{object_name}' no Bucket '{bucket_name}' foi realizado com sucesso.")
+    
+    #Possíveis erros:
+    except FileNotFoundError:
+        print(f"Erro: O arquivo '{object_name}'não foi encontrado.")
+    
+    except NoCredentialsError:
+        print('Erro: As credenciais da AWS estão inválidas ou não foram encontradas.')
 
-COPY mascara.py /app/mascara.py 
+    except Exception as exc:
+        print(f"Erro Inesperado: {exc}")
+        
+response = criar_bucket(aws_access_key_id, aws_secret_access_key, session_token, region_name, bucket_name)
+    
+if response:
+    print("Informações sobre a criação do bucket:", response)
+        
 
-WORKDIR /app
-
-CMD ["python", "mascara.py"]
-```  
-
-Para criar o container foi utilizado o comando  
-```bash
-docker build -t mascarar-dados .
+enviar_arquivo(aws_access_key_id, aws_secret_access_key, session_token, bucket_name, file_path, object_name)
 ```
-Produzindo o resultado:  
-![build mascarar-dados](../Evidencias/build_mascararDados.png)  
 
-E depois o container foi executado no terminal em modo iterativo com o comando:  
-```bash
-docker run -it mascarar-dados
-```  
-Uma vez que o terminal executou o script mascara.py, algumas strings foram enviadas para codificação como ilustra a figura abaixo.  
-![hashes geradas](../Evidencias/hashes_teste.png)  
+O código é utilizado para o arquivo descrito em **file_path** para o bucket especificado em **bucket_name**. O script está configurado para que o arquivo suba para o bucket com o nome especificado em **object_name**.  
 
-Como pode ser observado na imagem anterior, o script se comportou dentro do esperado e sua execução dentro do container foi performada com sucesso.  
+Após a execução do código contendo as duas funções descritas acima, foi obtido o resultado:  
+![criação do bucket + envio](../Evidencias/cria_envia.png)  
+
+Pode-se verificar se, de fato, o script criou o bucket e enviou o arquivo para a AWS e esse passo está ilustrado nas duas figuras a seguir.  
+### Criação do bucket do desafio
+![buckets](../Evidencias/buckets_exercicio_desafio.png)  
+#
+### Objeto enviado para o bucket
+![objeto no bucket](../Evidencias/objeto_bucket.png)  
+
+O próximo passo foi fazer o download do arquivo **.csv** que agora está no bucket para que sejam feitas as manipulações localmente. O arquivo foi puxado do bucket com o nome **dataset-baixado**.  
+
+Para fazer o download do arquivo foi usado o script a seguir:  
+
+```python 
+import boto3
+from botocore.exceptions import ClientError, NoCredentialsError
+
+aws_access_key_id = 'ASIAWPPO6JPYDI4PWN4J'
+aws_secret_access_key = '8LGL2c6smjKi14nafGkSnWBbaUTD++oA31FUPewV'
+session_token = 'IQoJb3JpZ2luX2VjEA8aCXVzLWVhc3QtMSJGMEQCICZ4ZJEDNIcgyxuevdK+SCsNdzf35MqxdHLPvXPw6e4uAiAf1UwwqIWXk6cPit0bVcGLlLr/xy+EDaX4cUxWVO+HQyqqAwjY//////////8BEAAaDDQ0NTU2NzA5Mzc0NCIM8oEgKde1d+ysuexxKv4CnFswsgNSVTrFEjIWBgnlZGIJJuj4XkDpkwmjZ94SRLgij/DMAqDmCmJD6MejE1RoYEks0B6X7BwZbmUnO3/eqoGd8y185hj0pxE7UFa3vxrnn1JKQ9EyuBaJnBUYqndWaojF6sW7SxmtJKcoP8iDcPiFFY82YfwWByOAgBzFRJhAuRg8HDawIemPdt9w/DZmVly3XbrbheaZScAO7TdWESRWlLkbyEYdD8tvxGelGsA6m/HI/j7z96Tlb6S9k9a6Ht3S6SQRect5YPEJdsNv4pmOl1mbFYjQBmBnDI9zFZiC7aCzpVMUW35ONtYPTH1jLSL0EGjcRNNdvMSMf7sJhk4FXLNa3kyxPW4dZhILk+Np85UHmXYO2HAmvT6q5/OeXvKw1Sz42HK5ccLoA/YpS+VJUK4GJkK4wosU7+K+msOVTVQcY1imSlZp+bYSXE9CAgDmhSn05W+8/bdTcc0JDdT8jR795QfmRr8y6HvaqJOg0jrotIzuhfAsDhmJ7TD77aW7BjqnASUtoZJbN3n7Vm/ibed3yDJrb2yCa7MJg7yYokyJIn++bIqYuxHGInTcUniOfKtjUWE1BiadfwUE0zrVQmOuhBMfXJ5fbiphOpzduUnYXw6p0WXobF7JeLjYWM4gjx3Y+9tBFXpIwV2gzyH5yCECz3j7lx4fXjv5djVXSDUrbWjFbcskDEPc/qP1sjWG5FTSy2tGrrQBnjxzIMFdBrS/RrFK8/ODC9EJ'
+
+bucket_name = 'desafio-sprint05-welder' #nome do bucket já existente
+object_name = 'cebas-dataset.csv' #nome do arquivo no bucket 
+download_path = 'dataset-baixado.csv' #salva o arquivo baixado na mesma pasta que está o script
+
+def baixar_arquivo_do_bucket(aws_access_key_id, aws_secret_access_key, session_token, bucket_name, object_name, download_path):
+    try:
+        #criando o client no s3
+        s3_client = boto3.client('s3', 
+                        aws_access_key_id = aws_access_key_id,
+                        aws_secret_access_key = aws_secret_access_key,
+                        aws_session_token = session_token)
+                        
+        #baixando o arquivo do bucket 
+        s3_client.download_file(bucket_name, object_name, download_path)
+        print(f"O arquivo '{object_name}' foi baixado com sucesso.")      
+    
+    except FileNotFoundError:
+        print("O caminho especificado para o download não foi encontrado.")
+
+    except NoCredentialsError:
+        print("Erro: As credenciais da AWS estão inválidas ou não foram encontradas.")
+        
+    except ClientError as cError:
+        print(f"Erro ao fazer o download do arquivo: {cError}")
+
+#Executando a função para download do arquivo
+baixar_arquivo_do_bucket(aws_access_key_id, aws_secret_access_key, session_token,
+    bucket_name, object_name, download_path)
+``` 
+
+O resultado obtido está ilustrado na figura a seguir.  
+![download do dataset ](../Evidencias/download_objeto.png)  
+
+## Manipulações dos dados 
+Para responder à pergunta **"Quais entidades possuem a palavra "Hospital", "Hospitalidade" ou alguma variação desse tipo no nome, têm status de certificação vigente, e começaram sua certificação em 2021, retornando o total de entidades em cada status (válida e/ou vigente), a duração da certificação (em dias) e o nome da entidade com a primeira letra maiúscula e o resto minúscula?"** foi utilizado o script python com o código mostrado a seguir.  
+
+```python 
+import pandas as pd
+
+#Leitura dos dados do arquivo .csv
+df = pd.read_csv('dataset-baixado.csv') 
+
+#fazendo uma cópia de segurança
+df1 = df.copy()
+dim_inicial = df1.shape
+
+print('+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-INÍCIO-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+')
+
+#verificando as dimensões do dataset original
+print('As dimensões do dataset original são: ',dim_inicial)
+
+#derrubando todas as linhas que possuem pelo menos um valor NaN
+df1 = df1.dropna()
+dim_final = df1.shape
+
+#salvando o dataset limpo
+df_limpo = df1 
+df_limpo.to_csv('./df_limpo.csv', index=False)
+print('Dataset limpo salvo com sucesso.')
+print()
+print('+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+')
+
+
+#verificando novamente as dimensões do dataset, agora pós modificação
+print('As novas dimensões do dataset são:' ,dim_final)
+
+#Calculando a quantidade de linhas deletadas por possuirem valores NaN
+print('A quantidade de linhas deletadas foi de: ', (dim_inicial[0] - dim_final[0]))
+print('+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+')
+#verificando o cabeçalho do dataset
+print()
+print('Visualização das 10 primeiras linhas do dataset: ')
+print(df1.head(10))
+print('+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+')
+
+#verificando os tipos de dados de cada coluna
+print()
+print('Verificação dos tipos de cada coluna', df1.dtypes)
+print()
+print()
+print('+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+')
+
+#4.4 Uma função de conversão
+#Conversão das colunas de data de início e fim da certificação para tipo data.
+df1['cebas_dt_inicio_certificacao_s'] = pd.to_datetime(df1['cebas_dt_inicio_certificacao_s'], format = '%d/%m/%Y')
+df1['cebas_dt_fim_certificacao_s'] = pd.to_datetime(df1['cebas_dt_fim_certificacao_s'], format = '%d/%m/%Y')
+
+print()
+print('Os tipos depois da conversão são: ',df1.dtypes)
+print()
+print('+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+')
+
+# 4.1 - Filtrar dados usando dois operadores lógicos
+
+#selecionando as entidades com status de certificação vigente ou válidae que contenham hospital ou alguma variação disso no nome
+#criação de um dataframe auxiliar para gravar o subconjunto de dados correspondente ao filtro aplicado
+print()
+df_aux = df1[
+    ((df1['cebas_status_certificacao_s'] == 'VIGENTE') | (df1['cebas_status_certificacao_s'] == 'VÁLIDA' )) & (df1['cebas_razao_social_entidade_s'].str.contains(r'HOSPITAL'))
+].reset_index(drop = True) #reset_index(drop=True) para resetar os índices do novo dataframe e derrubar os índices usados anteriormente
+print('Filtrando entidades com status de certificação vigente ou válida e que contenham Hospital no nome.')
+print(df_aux.head(10))
+print('+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+')
+print()
+
+
+# Calcular a duração da certificação em dias (utilizando vetorização)
+
+print('Inserida a coluna de duração da certificação (dias)')
+df_aux['duracao_dias'] = (df_aux['cebas_dt_fim_certificacao_s'] - df_aux['cebas_dt_inicio_certificacao_s']).dt.days #subtração das datas e conversão para dias
+print(df_aux)
+print()
+print('+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+')
+
+
+# 4.5 - Filtrar para certificações que começaram em 2021
+print()
+print('Filtrando pelas certificações iniciadas em 2021')
+df_aux = df_aux[df_aux['cebas_dt_inicio_certificacao_s'].dt.year == 2021]
+
+print(df_aux)
+print()
+print('+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+')
+
+
+# 4.2 - Aplicar agregações: contar total de entidades e somar por status
+
+print()
+agregacoes = df_aux.groupby('cebas_status_certificacao_s').agg(total=('cebas_razao_social_entidade_s', 'count')).reset_index() #faz a contagem e mostra o valor numa coluna renomeada para 'total'
+print('Contagem de entidades por status de certificação.')
+print(agregacoes)
+print()
+print('+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+')
+
+# 4.6 - Converter o nome das entidades para primeira letra maiúscula e as demais minúsculas
+print()
+df_aux['cebas_razao_social_entidade_s'] = df_aux['cebas_razao_social_entidade_s'].str.capitalize()
+print(df_aux['cebas_razao_social_entidade_s'])
+print()
+print('+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+')
+
+print()
+df_aux.to_csv('./df_aux.csv', index = False)
+print('Arquivo df_aux.csv salvo com sucesso.')
+agregacoes.to_csv('./agregacoes.csv', index = False)
+print('Arquivo agregacoes.csv salvo com sucesso.')
+```
+
+O script é responsável por retornar um arquivo .csv com o dataset limpo (após retirada dos valores NaN), outro arquivo .csv com o dataframe auxiliar utilizado após os filtros e, por último, um outro arquivo .csv com o resultado das funções de agregação aplicadas.  
+Sua execução pode ser observada nas figuras a seguir.
+![manipulações 1](../Evidencias/manipulacoes1.png)
+![manipulações 2](../Evidencias/manipulacoes2.png)  
+![manipulações 1](../Evidencias/manipulacoes3.png)  
+![manipulações 1](../Evidencias/manipulacoes4.png)  
+
+
+
+
+
+
+
+ 
 
 
