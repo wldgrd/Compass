@@ -1,7 +1,7 @@
 import pandas as pd
 
 #Leitura dos dados do arquivo .csv
-df = pd.read_csv('cebas.csv') 
+df = pd.read_csv('dataset-baixado.csv') 
 
 #fazendo uma cópia de segurança
 df1 = df.copy()
