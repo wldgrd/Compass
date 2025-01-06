@@ -1,7 +1,6 @@
 # Resumo
 Nessa sprint aprendemos sobre diversos serviços da analytics e um overview sobre os serviços Amazon Athena, AWS Glue, Amazon EMR, Amazon Redshift e Amazon QuickSight. Praticamos através dos laboratórios propostos os serviços S3, Athena e Lambda, os quais darei maior enfoque a seguir.
-
-Aqui darei destaque para o serviço **Amazon S3 (Simple Storage Service)** que foi o serviço que usamos no desenvolvimento de ambos exercício e desafio da sprint.  
+  
 
 ## Amazon S3 (Simple Storage Service)
 O Amazon Simple Storage Service (Amazon S3) é um serviço de armazenamento de objetos que oferece escalabilidade, disponibilidade de dados, segurança e performance líderes do setor. Clientes de todos os portes e setores podem armazenar e proteger qualquer quantidade de dados de praticamente qualquer caso de uso, como data lakes, aplicações nativas da nuvem e aplicações móveis. Com classes de armazenamento econômicas e recursos de gerenciamento fáceis de usar, você pode otimizar custos, organizar dados e configurar controles de acesso ajustados para atender a requisitos específicos de negócios, organizacionais e de conformidade.
