@@ -1,5 +1,5 @@
 # Resumo
-Nessa sprint aprendemos sobre diversos serviços da AWS tais como EC2, IAM, RDS, S3 e VPC, praticamos através dos laboratórios propostos no game Cloud Quest e também das questões no curso preparatório.
+Nessa sprint aprendemos sobre diversos serviços da analytics e um overview sobre os serviços Amazon Athena, AWS Glue, Amazon EMR, Amazon Redshift e Amazon QuickSight. Praticamos através dos laboratórios propostos os serviços S3, Athena e Lambda, os quais darei maior enfoque a seguir.
 
 Aqui darei destaque para o serviço **Amazon S3 (Simple Storage Service)** que foi o serviço que usamos no desenvolvimento de ambos exercício e desafio da sprint.  
 
@@ -20,14 +20,70 @@ Passos:
     **6**. Clique em **criar bucket**.  
 # 
 
-## Amazon EC2 (Elastic Compute Cloud )  
-O Amazon EC2 é um serviço da AWS que oferece capacidade computacional na nuvem, segura e redimensionável. Foi projetado para facilitar a computação em nuvem e seus recursos são elásticos, isto é, podem ser configurados para escalar automaticamente conforme demanda. O serviço também permite criar e executar quase todos os tipos de aplicação, oferece uma grande variedade de tipos de instâncias otimizadas para cada necessidade e permite que tudo seja customizável.   
+## AWS Athena  
+O Amazon Athena é um serviço de análise interativo e sem servidor criado em frameworks de código aberto, com suporte a formatos de tabela e arquivo abertos. O Athena fornece uma maneira simplificada e flexível de analisar petabytes de dados onde eles residem. Analise dados ou crie aplicações a partir de um data lake do Amazon Simple Storage Service (S3) e mais de 30 fontes de dados, incluindo fontes de dados on-premises ou outros sistemas em nuvem usando SQL ou Python. O Athena é construído com mecanismos Trino e Presto de código aberto e frameworks Apache Spark, sem necessidade de provisionamento ou configuração.  
+![Esquemático Athena](../img/athena.png)
+Fonte: https://aws.amazon.com/pt/athena/ (acesso em 28/12/2024)
 
-## Amazon IAM (Identity and Access Management)  
-O Amazon IAM é um serviço da AWS que permite controlar o acesso a recursos e serviços AWS de forma segura.  O serviço pode ser utilizado para gerenciar usuários, credenciais de segurança e permissões, especificar quem pode acessar quais recursos e serviços da AWS, determinar as condições de acesso, proteger recursos da AWS. 
+## AWS Lambda  
+Lambda é um serviço de computação ideal para cenários de aplicativos que precisam aumentar rapidamente e diminuir para zero quando não há demanda. Por exemplo, você pode usar Lambda para:
+
+Processamento de arquivos: use o Amazon Simple Storage Service (Amazon S3) para acionar o processamento de dados do Lambda em tempo real após um upload.
+
+Processamento de fluxo: use o Lambda e o Amazon Kinesis para processar dados de streaming em tempo real para rastreamento de atividades de aplicativos, processamento de ordens de transações, análise de fluxo de cliques, limpeza de dados, filtragem de logs, indexação, análise de mídia social, telemetria de dados de dispositivos da Internet das Coisas (IoT) e medição.
+
+Aplicativos Web: combine o Lambda com outros serviços da AWS para criar aplicativos Web poderosos que aumentam e diminuem automaticamente e são executados em uma configuração de alta disponibilidade em vários data centers.
+
+Backends de IoT: crie backends sem servidor usando Lambda para lidar com solicitações de API da Web, dispositivos móveis, IoT e de terceiros.
+
+Backends móveis: crie backends usando Lambda e Amazon API Gateway para autenticar e processar solicitações de API. Use o AWS Amplify para integrar facilmente com seus frontends iOS, Android, Web e React Native.
+
+Ao usar o Lambda, você é responsável apenas pelo seu código. O Lambda gerencia a frota de computação que oferece um equilíbrio de memória, CPU, rede e outros recursos para executar seu código. Como o Lambda gerencia esses recursos, você não pode efetuar login em instâncias de computação ou personalizar o sistema operacional em tempos de execução fornecidos. O Lambda executa atividades operacionais e administrativas em seu nome, incluindo gerenciamento de capacidade, monitoramento e registro em log de suas funções do Lambda.  
+
+### Principais características 
+
+Os seguintes recursos principais ajudam você a desenvolver aplicativos Lambda que são escaláveis, seguros e facilmente extensíveis:
+
+**Variáveis ​​de ambiente**  
+Use variáveis ​​de ambiente para ajustar o comportamento da sua função sem atualizar o código.
+
+**Versões**  
+Gerencie a implantação de suas funções com versões, para que, por exemplo, uma nova função possa ser usada para testes beta sem afetar os usuários da versão de produção estável.
+
+**Imagens de contêiner**  
+Crie uma imagem de contêiner para uma função do Lambda usando uma imagem base fornecida pela AWS ou uma imagem base alternativa para que você possa reutilizar suas ferramentas de contêiner existentes ou implantar cargas de trabalho maiores que dependem de dependências consideráveis, como aprendizado de máquina.
+
+**Camadas**  
+Empacote bibliotecas e outras dependências para reduzir o tamanho dos arquivos de implantação e tornar mais rápida a implantação do seu código.
+
+**Extensões Lambda**  
+Aumente suas funções Lambda com ferramentas para monitoramento, observabilidade, segurança e governança.
+
+**URLs de funções**  
+Adicione um ponto de extremidade HTTP(S) dedicado à sua função Lambda.
+
+**Transmissão de resposta**  
+Configure seus URLs de função Lambda para transmitir cargas de resposta de volta aos clientes a partir de funções Node.js, para melhorar o desempenho do tempo até o primeiro byte (TTFB) ou para retornar cargas maiores.
+
+**Controles de simultaneidade e dimensionamento**  
+Aplique controle refinado sobre o dimensionamento e a capacidade de resposta dos seus aplicativos de produção.
+
+**Assinatura de código**  
+Verifique se apenas desenvolvedores aprovados publicam código inalterado e confiável em suas funções Lambda
+
+**Rede privada**  
+Crie uma rede privada para recursos como bancos de dados, instâncias de cache ou serviços internos.
+
+**Acesso ao sistema de arquivos**  
+Configure uma função para montar um Amazon Elastic File System (Amazon EFS) em um diretório local, para que seu código de função possa acessar e modificar recursos compartilhados com segurança e alta simultaneidade.
+
+**Lambda SnapStart para Java**  
+Melhore o desempenho de inicialização dos tempos de execução Java em até 10x sem custo extra, normalmente sem alterações no código da sua função.
+
+**Fonte:** Documentação oficial AWS
 
 # Links
-[📜**Certificados**](/Sprint5/Certificados/)  
-[🕵️‍♂️**Evidências** ](/Sprint5/Evidencias/)  
-[💪**Exercícios**](/Sprint5/Exercicios/)  
-[🖳 **Desafio**](/Sprint5/Desafio/README.md)  
+[📜**Certificados**](/Sprint6/Certificados/)  
+[🕵️‍♂️**Evidências** ](/Sprint6/Evidencias/)  
+[💪**Exercícios**](/Sprint6/Exercicios/)  
+[🖳 **Desafio**](/Sprint6/Desafio/README.md)  
