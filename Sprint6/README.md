@@ -81,6 +81,30 @@ Configure uma função para montar um Amazon Elastic File System (Amazon EFS) em
 Melhore o desempenho de inicialização dos tempos de execução Java em até 10x sem custo extra, normalmente sem alterações no código da sua função.
 
 **Fonte:** Documentação oficial AWS
+#  
+
+# Exercícios  
+1. Execução da função no lambda.
+
+![lambda](/Sprint6/Evidencias/lambda_zip_layer.png)
+![lambda](/Sprint6/Evidencias/container_lambda.png)
+![lambda](/Sprint6/Evidencias/lambda_layer_criado.png)
+![lambda](/Sprint6/Evidencias/lambda_layer.png)
+![lambda](/Sprint6/Evidencias/lambda3.png)
+![lambda](/Sprint6/Evidencias/lambda.png)
+![lambda](/Sprint6/Evidencias/lambda2.png)  
+
+2. Execução da query no Athena  
+
+![athena](/Sprint6/Evidencias/athena1.png)
+![athena](/Sprint6/Evidencias/athena2.png)
+![athena](/Sprint6/Evidencias/athena3.png)
+![athena](/Sprint6/Evidencias/athena4.png)
+![athena](/Sprint6/Evidencias/athena5.png)
+
+3. Exercício sobre s3 já havia sido feito na sprint anterior.
+
+
 
 # Links
 [📜**Certificados**](/Sprint6/Certificados/)  
