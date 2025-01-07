@@ -1,6 +1,29 @@
 # Objetivo  
 O objetivo é praticar a combinação de conhecimentos vistos no programa e fazer um mix de tudo que já foi dito.  
 
+# Perguntas  
+
+Aqui serão analisadas perguntas referentes aos filmes e séries dos gêneros crime e/ou guerra.  
+
+1. **Qual é a distribuição da nota média dos filmes e séries por gênero crime/guerra?**  
+**Motivo da análise:** Pode ser um indicativo da preferência do público por um determinado formato de mídia, além de verificar se existe uma tendência à filmes terem nota média maiores do que séries ou vice-versa.  
+
+2. **Existe uma correlação entre a idade dos artistas e as notas médias dos filmes e séries em que atuaram?**  
+**Motivo da análise:** A análise pode revelar se existe uma tendência de que atores mais jovens ou mais velhos tenham desempenho melhor, além de poder, possivelmente, mostrar uma visão sobre a importância de diferentes faixas etárias nas indústrias de filmes e séries.  
+
+3. **Como o tempo de duração dos filmes e das séries se relaciona com a nota média e com o número de votos?**  
+**Motivo da análise:** Perceber se existe alguma preferência por filmes e séries mais longos ou mais curtos.  
+
+4. **Quais são o filme e a série com maior número de votos da última década?**  
+**Motivo da análise:** verificar se existe relação entre os enredos e também se possuem artistas em comum.  
+
+5. **Quais artistas têm a maior nota média?**  
+**Motivo da análise:** Avaliar quais artistas são mais frequentemente bem avaliados e montar um ranking, por exemplo, Top 5 Artistas mais bem avaliados das séries e dos filmes.  
+
+#
+
+
+
 # Instruções Gerais  
 **ENTREGA 1**
 
