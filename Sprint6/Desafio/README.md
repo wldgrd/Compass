@@ -22,8 +22,6 @@ Aqui serão analisadas perguntas referentes aos filmes e séries dos gêneros cr
 
 #
 
-
-
 # Instruções Gerais  
 **ENTREGA 1**
 
