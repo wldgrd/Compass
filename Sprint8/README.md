@@ -1,5 +1,5 @@
 # Resumo
-Nessa sprint, aprendemos sobre Spark, Hadoop , AWS Glue e voltamos a usar o Lambda juntamente com o S3 para dar sequência na criação do data lake.
+Nessa sprint, usamos o Pyspark juntamente com o Glue para o processamento dos dados e criação da camada **trusted** do datalake criado usando o S3.
   
 
 ## Amazon S3 (Simple Storage Service)
@@ -8,36 +8,6 @@ O Amazon Simple Storage Service (Amazon S3) é um serviço de armazenamento de o
 ![Esquemático S3](../img/s3.png)
 Fonte: https://aws.amazon.com/pt/s3/ (acesso em 23/12/2024)  
 
- 
-# 
-
-## AWS Lambda  
-Lambda é um serviço de computação ideal para cenários de aplicativos que precisam aumentar rapidamente e diminuir para zero quando não há demanda. Por exemplo, você pode usar Lambda para:
-
-Processamento de arquivos: use o Amazon Simple Storage Service (Amazon S3) para acionar o processamento de dados do Lambda em tempo real após um upload.
-
-Aplicativos Web: combine o Lambda com outros serviços da AWS para criar aplicativos Web poderosos que aumentam e diminuem automaticamente e são executados em uma configuração de alta disponibilidade em vários data centers.
-
-Backends de IoT: crie backends sem servidor usando Lambda para lidar com solicitações de API da Web, dispositivos móveis, IoT e de terceiros.
-
-Backends móveis: crie backends usando Lambda e Amazon API Gateway para autenticar e processar solicitações de API. Use o AWS Amplify para integrar facilmente com seus frontends iOS, Android, Web e React Native.
-
-Ao usar o Lambda, você é responsável apenas pelo seu código. O Lambda gerencia a frota de computação que oferece um equilíbrio de memória, CPU, rede e outros recursos para executar seu código. Como o Lambda gerencia esses recursos, você não pode efetuar login em instâncias de computação ou personalizar o sistema operacional em tempos de execução fornecidos. O Lambda executa atividades operacionais e administrativas em seu nome, incluindo gerenciamento de capacidade, monitoramento e registro em log de suas funções do Lambda.  
-
-### Principais características 
-
-Os seguintes recursos principais ajudam você a desenvolver aplicativos Lambda que são escaláveis, seguros e facilmente extensíveis:
-
-**Variáveis ​​de ambiente**  
-Use variáveis ​​de ambiente para ajustar o comportamento da sua função sem atualizar o código.
-
-**Versões**  
-Gerencie a implantação de suas funções com versões, para que, por exemplo, uma nova função possa ser usada para testes beta sem afetar os usuários da versão de produção estável.
-
-**Camadas**  
-Empacote bibliotecas e outras dependências para reduzir o tamanho dos arquivos de implantação e tornar mais rápida a implantação do seu código.
-
-**Fonte:** Documentação oficial AWS
 #  
 ## AWS Glue  
 O AWS Glue é um serviço de integração de dados com tecnologia sem servidor que facilita aos usuários de análise a descoberta, preparação, transferência e integração de dados de várias fontes. Você pode usá-lo para análise, machine learning e desenvolvimento de aplicações. Também inclui outras ferramentas de produtividade e operações de dados para criação, execução de trabalhos e implementação de fluxos de trabalho de negócios.
@@ -69,20 +39,31 @@ Treine algoritmos de aprendizado de máquina em um laptop e use o mesmo código 
 
 
 # Exercícios  
-1. Execução do exercício "Contador de Palavras" com Spark.  
-![spark](/Sprint7/Exercicios/Spark/spark1.png)  
-![spark](/Sprint7/Exercicios/Spark/spark2.png)  
-![spark](/Sprint7/Exercicios/Spark/spark3.png)  
-![spark](/Sprint7/Exercicios/Spark/spark4.png)  
+1. **Execução do exercício "Geração de massa de dados".**  
+![massa](/Sprint8/Exercicios/massa1.png)  
+![massa](/Sprint8/Exercicios/massa2.png)  
+![massa](/Sprint8/Exercicios/massa3.png)   
+  
 
-2. Execução do exercício sobre a API do TMDB.  
-![tmdb](/Sprint7/Exercicios/TMDB/tmdb_codigo.png)
-![tmdb](/Sprint7/Exercicios/TMDB/tmdb_retorno.png)
+2. **Execução do exercício sobre Apache Spark. (Executado no Google Colab)**  
+![spark](/Sprint8/Exercicios/spark1.png)
+![spark](/Sprint8/Exercicios/spark2.png)
+![spark](/Sprint8/Exercicios/spark3.png)
+![spark](/Sprint8/Exercicios/spark4.png)
+![spark](/Sprint8/Exercicios/spark5.png)
+![spark](/Sprint8/Exercicios/spark6.png)
+![spark](/Sprint8/Exercicios/spark7.png)
+![spark](/Sprint8/Exercicios/spark8.png)
+![spark](/Sprint8/Exercicios/spark9.png)
+![spark](/Sprint8/Exercicios/spark10.png)
+![spark](/Sprint8/Exercicios/spark11.png)
+![spark](/Sprint8/Exercicios/spark12.png)
+
 
 
 
 # Links
-[📜**Certificados**](/Sprint7/Certificados/)  
-[🕵️‍♂️**Evidências** ](/Sprint7/Evidencias/)  
-[💪**Exercícios**](/Sprint7/Exercicios/)  
-[🖳 **Desafio**](/Sprint7/Desafio/README.md)  
+[📜**Certificados**](/Sprint8/Certificados/)  
+[🕵️‍♂️**Evidências** ](/Sprint8/Evidencias/)  
+[💪**Exercícios**](/Sprint8/Exercicios/)  
+[🖳 **Desafio**](/Sprint8/Desafio/README.md)  
