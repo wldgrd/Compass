@@ -1,5 +1,5 @@
 # Resumo
-Nessa sprint, usamos o Pyspark juntamente com o Glue para o processamento dos dados e criação da camada **trusted** do datalake criado usando o S3.
+Nessa sprint, usamos o Pyspark juntamente com o Glue para o processamento dos dados e criação da camada **refined** do datalake criado usando o S3 e, por fim, o Athena para as consultas SQL.
   
 
 ## Amazon S3 (Simple Storage Service)
@@ -37,33 +37,42 @@ Realizar Análise Exploratória de Dados (EDA) em dados em escala de petabytes s
 4. **Aprendizado de máquina:**  
 Treine algoritmos de aprendizado de máquina em um laptop e use o mesmo código para escalar para clusters tolerantes a falhas de milhares de máquinas.  
 
+#
+## Athena  
+O Amazon Athena é um serviço de consultas interativas da Amazon Web Services (AWS) que facilita a análise de dados diretamente no Amazon Simple Storage Service (S3) usando linguagem SQL padrão. Com apenas algumas ações no AWS Management Console, é possível direcionar o Athena para os dados armazenados no S3 e começar a usar o SQL para executar consultas.
 
-# Exercícios  
-1. **Execução do exercício "Geração de massa de dados".**  
-![massa](/Sprint8/Exercicios/massa1.png)  
-![massa](/Sprint8/Exercicios/massa2.png)  
-![massa](/Sprint8/Exercicios/massa3.png)   
-  
+**Principais características**  
+**Sem servidor:**  
+O Athena não exige configuração ou gerenciamento de servidores, o que significa que você se concentra apenas na análise dos dados.  
+**Fácil de usar:**  
+A interface do Athena é intuitiva e permite que você execute consultas SQL de forma rápida e fácil.  
 
-2. **Execução do exercício sobre Apache Spark. (Executado no Google Colab)**  
-![spark](/Sprint8/Exercicios/spark1.png)
-![spark](/Sprint8/Exercicios/spark2.png)
-![spark](/Sprint8/Exercicios/spark3.png)
-![spark](/Sprint8/Exercicios/spark4.png)
-![spark](/Sprint8/Exercicios/spark5.png)
-![spark](/Sprint8/Exercicios/spark6.png)
-![spark](/Sprint8/Exercicios/spark7.png)
-![spark](/Sprint8/Exercicios/spark8.png)
-![spark](/Sprint8/Exercicios/spark9.png)
-![spark](/Sprint8/Exercicios/spark10.png)
-![spark](/Sprint8/Exercicios/spark11.png)
-![spark](/Sprint8/Exercicios/spark12.png)
+**Escalável:**  
+O Athena escala automaticamente para lidar com grandes volumes de dados e consultas complexas.  
 
+**Integrado com o S3:**  
+O Athena se integra perfeitamente com o S3, o serviço de armazenamento de objetos da AWS, permitindo que você consulte dados armazenados em diferentes formatos, como CSV, JSON, Parquet e ORC.  
+
+**Econômico:**  
+Você paga apenas pelas consultas que executa, o que torna o Athena uma solução econômica para análise de dados.
+Como funciona
+Você aponta o Athena para os dados armazenados no S3.
+O Athena usa o Presto, um mecanismo de consulta distribuído de código aberto, para executar consultas SQL nos dados.
+Os resultados da consulta são exibidos no console do Athena ou podem ser enviados para outros serviços da AWS, como o Amazon QuickSight, para visualização.  
+
+**Casos de uso**  
+
+**Análise de logs:**  
+O Athena pode ser usado para analisar logs de aplicativos, servidores e outros dispositivos para identificar problemas, tendências e padrões.  
+
+**Business intelligence:**  
+O Athena pode ser usado para gerar relatórios e dashboards para análise de dados de negócios.
+Ciência de dados: o Athena pode ser usado para explorar e analisar grandes conjuntos de dados para identificar insights e construir modelos de machine learning.  
 
 
 
 # Links
-[📜**Certificados**](/Sprint8/Certificados/)  
-[🕵️‍♂️**Evidências** ](/Sprint8/Evidencias/)  
-[💪**Exercícios**](/Sprint8/Exercicios/)  
-[🖳 **Desafio**](/Sprint8/Desafio/README.md)  
+[📜**Certificados**](/Sprint9/Certificados/)  
+[🕵️‍♂️**Evidências** ](/Sprint9/Evidencias/)  
+[💪**Exercícios**](/Sprint9/Exercicios/)  
+[🖳 **Desafio**](/Sprint9/Desafio/README.md)  
