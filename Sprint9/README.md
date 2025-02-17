@@ -69,6 +69,7 @@ O Athena pode ser usado para analisar logs de aplicativos, servidores e outros d
 O Athena pode ser usado para gerar relatórios e dashboards para análise de dados de negócios.
 Ciência de dados: o Athena pode ser usado para explorar e analisar grandes conjuntos de dados para identificar insights e construir modelos de machine learning.  
 
+![console athena](/Sprint9/Evidencias/console_athena.png) Imagem - Console do athena.
 
 
 # Links
