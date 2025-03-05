@@ -55,10 +55,12 @@ Gosto muito de ler, ouvir música, ver filmes, seriados, estar com o meu companh
 -Python (Ênfase em Análise de Dados. Bibliotecas: Pandas, Numpy)<br>
 -SQL<br>
 -Shell Script
+-Git bash  
 
 ### **BDs:** 
 -SQLite<br>
 -PostgreSQL<br>
+-MySQL
 
 ### **Ferramentas de Desenvolvimento:** 
 -Spyder<br>
