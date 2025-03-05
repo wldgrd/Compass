@@ -1,5 +1,4 @@
 import sys
-from awsglue.transforms import *
 from awsglue.utils import getResolvedOptions
 from awsglue.context import GlueContext
 from awsglue.job import Job
