@@ -29,7 +29,7 @@
 🌎 **Localização:** Valinhos - SP, Brasil  
 💻 **Instituição de Ensino:** UNIVESP  
 🎯 **Curso:** Bacharelado em Ciência de Dados  
-🎓 **Semestre Atual:** 3º Semestre
+🎓 **Semestre Atual:** 4º Semestre
 
 <br>
 
@@ -80,3 +80,4 @@ Gosto muito de ler, ouvir música, ver filmes, seriados, estar com o meu companh
 7. [Sprint 7](/Sprint7/README.md)
 8. [Sprint 8](/Sprint8/README.md)
 9. [Sprint 9](/Sprint9/README.md)
+10.[Spriont 10](/Sprint10/README.md)
