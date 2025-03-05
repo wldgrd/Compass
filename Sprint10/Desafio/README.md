@@ -368,10 +368,6 @@ OBS:
  - Nos outros gráficos e nas nuvens de palavras, o padrão de cores não expressa, ao menos explicitamente, ligação com os gêneros, mas sim com outros agrupamentos.  
 
 
-
-
-
-
 # Links
 [📜**Certificados**](/Sprint10/Certificados/)  
 [🕵️‍♂️**Evidências** ](/Sprint10/Evidencias/)  
