@@ -231,7 +231,8 @@ Após a execução do job no glue, o crawler criado na sprint anterior foi execu
 
 Para verificação dos dados e da coerência do modelo, foi utilizada uma query via AWS Athena. A query tem como intuito fazer os joins possíveis e construir uma única tabela contendo todas as colunas de todas as dimensões.  
 
-Os dados disponíveis para consulta estão listados no Athena:
+Os dados disponíveis para consulta estão listados no Athena:  
+
 ![athena 1](../Evidencias/athena.png)  
 
 O código da query utilizada foi: 
@@ -310,7 +311,65 @@ A figura abaixo ilustram o resultado da query.
 ![athena2](../Evidencias/athena2.png)  
 
 <br> 
- 
+
+No Quicksight foram importados todos os dados via Athena e então configurados os joins entre as tabelas através dos campos adequados.  
+
+![quicksight joins](../Evidencias/quicksight_joins.png)  
+<br>  
+
+
+Como as perguntas foram formuladas para analisar os acontecimentos das últimas 5 décadas, foi necessário criar um campo calculado `decada_lancamento` para ser usado como filtro nos gráficos e tabelas construídos.  
+O código da métrica é:
+```sql 
+ floor((ano / 10)) * 10
+``` 
+
+no qual o valor do ano, por exemplo 2015, é dividido por 10, resultando em 201,5 e então arredondado para baixo usando a função floor(), o que leva a 201. Posteriormente, o resultado das operações anteriores é multiplicado por 10, resultando em 2010 que é o valor a ser utilizado para filtro de décadas.  
+
+Vale a pena ressaltar que todos as análises são filtradas por gênero, sendo incluídos apenas os gêneros de **crime** e **guerra**, além do filtro de décadas.  
+
+Segue alguns recortes do dashboard gerado e sua funcionalidade.  
+
+# Cabeçalho  
+![cabeçalho](../Evidencias/cabecalho_dash.png)  
+
+
+1. **Qual é a distribuição da nota média dos filmes por gênero crime/guerra nas últimas 5 décadas?**  
+
+![nota media](../Evidencias/nota_media.png) 
+
+2. **Como o tempo de duração dos filmes se relaciona com a nota média e com o número de votos nas últimas 5 décadas?**  
+
+![duração](../Evidencias/duracao_versus_nota.png)  
+
+
+
+3. **Qual é a proporção de filmes war/crime nas últimas 5 décadas?**  
+
+![proporção](../Evidencias/proporcao.png)  
+
+
+4. **Qual(is) é (são) o(s) país(es) que mais produz(em) filmes de cada gênero nas últimas 5 décadas?**  
+
+![paises](../Evidencias/paises.png)  
+
+
+5. **Qual é a principal língua falada em cada gênero nas últimas 5 décadas?**  
+
+![idiomas](../Evidencias/idiomas.png)  
+
+#
+
+A combinação destes resultados leva ao dashboard final ilustrado a seguir.  
+![dash final](../Evidencias/dash_final.png)  
+
+OBS: 
+ - Tanto nos gráficos de nota e proporção, quanto nas tabelas utilizadas, é mantido um padrão de cores para cada um dos gêneros crime ou guerra.  
+ - Nos outros gráficos e nas nuvens de palavras, o padrão de cores não expressa, ao menos explicitamente, ligação com os gêneros, mas sim com outros agrupamentos.  
+
+
+
+
 
 
 # Links
