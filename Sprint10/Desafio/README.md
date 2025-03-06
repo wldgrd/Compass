@@ -367,6 +367,47 @@ OBS:
  - Tanto nos gráficos de nota e proporção, quanto nas tabelas utilizadas, é mantido um padrão de cores para cada um dos gêneros crime ou guerra.  
  - Nos outros gráficos e nas nuvens de palavras, o padrão de cores não expressa, ao menos explicitamente, ligação com os gêneros, mas sim com outros agrupamentos.  
 
+## Observações gerais sobre os gráficos apresentados  
+
+- Os dados parecem indicar que há uma maior produção de filmes do gênero crime (produção acima de 65% ) ao longo das últimas décadas, entretanto a média de notas das últimas 5 décadas mostra que os filmes do gênero guerra são melhor avaliados sendo média de 4,25 para guerra e 4,05 para crime.  
+
+- Certos gêneros, como Crime e Guerra, costumam atrair um público mais nichado e engajado, o que pode resultar em notas médias mais altas.  
+Filmes de Guerra frequentemente abordam eventos históricos, patriotismo ou conflitos emocionais intensos, o que pode gerar maior impacto e engajamento emocional no público.  
+Filmes Crime geralmente possuem narrativas intrigantes e roteiros bem elaborados, o que pode contribuir para avaliações melhores.  
+
+- Filmes mais longos tendem a ter roteiros mais desenvolvidos, com maior espaço para construção de personagens e narrativa.  
+O público que assiste filmes longos geralmente busca uma experiência cinematográfica mais profunda e tende a ser mais engajado.  
+Filmes curtos podem ser mais voltados para entretenimento rápido e podem não gerar tanto impacto emocional ou narrativo.  
+
+- O gênero Crime tem um apelo global e é popular em diversas culturas.
+Temas como detetives, investigações, máfia, corrupção e crimes reais atraem tanto o público quanto os críticos.  
+Muitos filmes de crime são baseados em eventos reais, o que pode aumentar o interesse e a percepção de qualidade.  
+**Possível Implicação:**  A indústria cinematográfica pode continuar investindo mais nesse gênero por causa do seu histórico de sucesso.
+Países que produzem mais filmes de crime podem influenciar a produção global.  
+
+- Os países dominantes na produção de cada gênero refletem fatores culturais e históricos:  
+    - Brasil (Crime nos anos 80): A produção de filmes nacionais sobre crime pode estar associada à realidade social e política da época.  
+    - Hong Kong (Crime nos anos 90 e 2000): Hong Kong tem um histórico forte de filmes de ação e crime, incluindo o cinema de triad (máfia chinesa).  
+    - Estados Unidos (Crime nos anos 2020): Com a ascensão do streaming, Hollywood continua sendo um polo global de produção desse gênero.  
+    - União Soviética e Rússia (Guerra): O país tem um histórico de filmes patrióticos e bélicos, especialmente devido à Segunda Guerra Mundial e conflitos geopolíticos.  
+**Possível Implicação:** As mudanças políticas e econômicas podem influenciar a temática dos filmes produzidos em cada país.
+Algumas regiões podem perder protagonismo na produção de filmes, enquanto outras podem emergir.  
+
+Também é importante notar que embora as nuvens de palavras representem situações muito semelhantes, ainda assim são situações diferentes. Ao comparar as duas nuvens, deve-se perceber que filmes gravados em um país podem não ter sido gravados com a língua dominante. Logo, um país pode produzir filmes em mais de um idioma, por exemplo:  
+- Um filme produzido nos Estados Unidos pode ser em inglês, espanhol ou francês.  
+ - Hong Kong, por exemplo, pode produzir filmes tanto em cantonês quanto em mandarim.  
+
+O idioma falado no filme pode ser diferente do país de produção, por exemplo:  
+- Filmes de guerra russos podem ser falados em inglês para atingir um público internacional.  
+- Filmes brasileiros podem ser produzidos em português, mas alguns podem incluir diálogos em inglês ou espanhol, dependendo da narrativa.  
+Algumas indústrias cinematográficas produzem filmes para mercados estrangeiros, por exemplo:  
+- Muitos filmes de ação e crime de Hong Kong dos anos 90 foram falados em cantonês, mas distribuídos em versões dubladas ou legendadas em inglês.
+
+<br><br>
+
+
+
+
 
 # Links
 [📜**Certificados**](/Sprint10/Certificados/)  
