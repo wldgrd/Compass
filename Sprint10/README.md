@@ -35,6 +35,7 @@ O Amazon QuickSight é um serviço de business intelligence (BI) baseado em nuve
 - Criação de relatórios e painéis personalizados  
 
 
+
 # Links
 [📜**Certificados**](/Sprint10/Certificados/)  
 [🕵️‍♂️**Evidências** ](/Sprint10/Evidencias/)  
