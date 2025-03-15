@@ -2,9 +2,9 @@ import boto3
 from botocore.exceptions import ClientError, NoCredentialsError
 
 # Configurações de credenciais
-aws_access_key_id = 'chave'
-aws_secret_access_key = 'chave_secreta'
-session_token = 'token'
+aws_access_key_id = input('Insira sua chave de acesso AWS: ')
+aws_secret_access_key = input('Insira sua chave de acesso secreta AWS: ')   
+session_token = input('Insira o token da sua sessão AWS: ')
 
 #Configurações adicionais
 region_name = 'us-east-1'
